@@ -10,7 +10,7 @@ const PageAnimation = () => {
       <div className='flex gap-4'>
 
         <Link to="page-animation-one"> Pagination One</Link>
-        <span> Pagination Two </span>
+        <Link to="page-animation-two"> Pagination Two</Link>
         <span> Pagination Three</span>
 
       </div>
