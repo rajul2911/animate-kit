@@ -39,20 +39,14 @@ const Column = ({ images, y, top }) => {
         y,
         top,
       }}
-      // className="absolute flex w-1/4 flex-col gap-4 p-2"
       className="relative flex flex-col lg:gap-10 gap-3 lg:p-3 p-1 overflow-hidden w-1/4"
     >
       {images.map((src, index) => (
-        // <div
-        //   key={index}
-        //   className="relative h-[55vh] w-full overflow-hidden rounded-[10px]"
-        // >
-          <img
-            src={src}
-            alt={`Parallax item ${index + 1}`}
-            className="h-full w-full rounded-[10px] object-cover"
-          />
-        // </div>
+        <img
+          src={src}
+          alt={`Parallax item ${index + 1}`}
+          className="h-full w-full rounded-[10px] object-cover"
+        />
       ))}
     </motion.div>
   );
@@ -63,9 +57,6 @@ const ScrollOne = () => {
 
   const [height, setHeight] = useState(0);
 
-  /*
-   * Get viewport height
-   */
   useEffect(() => {
     const updateHeight = () => {
       setHeight(window.innerHeight);
@@ -80,9 +71,7 @@ const ScrollOne = () => {
     };
   }, []);
 
-  /*
-   * Lenis smooth scrolling
-   */
+  // Lenis smooth scrolling
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: false,
@@ -103,81 +92,41 @@ const ScrollOne = () => {
     };
   }, []);
 
-  /*
-   * Track scroll progress of the parallax section
-   */
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end start"],
   });
 
-  /*
-   * Different speeds for each column
-   */
-  const y1 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, height * 0.8]
-  );
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
 
-  const y2 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, height * 1.4]
-  );
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
 
-  const y3 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, height * 0.5]
-  );
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
 
-  const y4 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, height * 1.2]
-  );
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
   return (
     <main className="">
-      <div className="h-screen" />
+     <div className="h-screen flex items-center justify-center lg:text-[140px] md:text-[100px] sm:text-[80px] text-[60px["> Scroll Down</div>
 
-      {/* PARALLAX SECTION */}
       <section
         ref={container}
-        // className=" flex relative h-[150vh] w-full overflow-hidden bg-[rgb(45,45,45)]"
         className="flex box-border gap-2 p-2 bg-[rgb(45,45,45)] overflow-hidden h-[150vh]"
       >
-        {/* Column 1 */}
-        <Column
-          images={[images[0], images[1], images[2]]}
-          y={y1}
-          top="-25%"
-        />
+        <Column images={[images[0], images[1], images[2]]} y={y1} top="-60%" />
 
-        {/* Column 2 */}
-        <Column
-          images={[images[3], images[4], images[5]]}
-          y={y2}
-          top="-45%"
-        />
+        <Column images={[images[3], images[4], images[5]]} y={y2} top="-110%" />
 
-        {/* Column 3 */}
-        <Column
-          images={[images[6], images[7], images[8]]}
-          y={y3}
-          top="-10%"
-        />
+        <Column images={[images[6], images[7], images[8]]} y={y3} top="-40%" />
 
-        {/* Column 4 */}
         <Column
           images={[images[9], images[10], images[11]]}
           y={y4}
-          top="-35%"
+          top="-100%"
         />
       </section>
 
-      <div className="h-screen" />
+      <div className="h-screen flex items-center justify-center lg:text-[140px] md:text-[100px] sm:text-[80px] text-[60px["> Scroll Up</div>
     </main>
   );
 };
