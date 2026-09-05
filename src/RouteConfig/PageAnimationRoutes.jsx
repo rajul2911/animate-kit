@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import PageAnimation from "../pages/PageAnimation";
 import PageAnimationOne from "../components/PageAnimationOne/PageAnimationOne";
 import PageAnimationTwo from "../components/PageAnimationTwo/PageAnimationTwo";
+import PageAnimationTHree from "../components/PageAnimationThree/PageAnimationTHree";
 
 const PageAnimationRoutes = () => {
   return (
@@ -24,6 +25,14 @@ const PageAnimationRoutes = () => {
         <Route path="about-two" element={<AboutOne />} />
 
         <Route path="contact-two" element={<ContactOne />} />
+      </Route>
+
+      <Route path="page-animation-three" element={<PageAnimationTHree />}>
+        <Route index element={<HomeOne />} />
+
+        <Route path="about-three" element={<AboutOne />} />
+
+        <Route path="contact-three" element={<ContactOne />} />
       </Route>
     </Routes>
   );

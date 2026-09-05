@@ -11,7 +11,7 @@ const PageAnimation = () => {
 
         <Link to="page-animation-one"> Pagination One</Link>
         <Link to="page-animation-two"> Pagination Two</Link>
-        <span> Pagination Three</span>
+        <Link to="page-animation-three"> Pagination THree</Link>
 
       </div>
 
