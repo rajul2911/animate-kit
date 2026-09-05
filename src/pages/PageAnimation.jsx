@@ -14,4 +14,3 @@ const PageAnimation = () => {
 }
 
 export default PageAnimation
-
