@@ -9,6 +9,7 @@ const PageAnimation = () => {
       eyebrow="Page Transitions"
       title="Page Animation"
       description="Explore different page transition animations and their source code."
+       backRoute="/"
     />
   )
 }

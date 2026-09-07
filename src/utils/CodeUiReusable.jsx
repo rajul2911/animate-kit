@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { MdOutlineArrowBackIos } from "react-icons/md";
 
 const CodeUiReusable = ({
   animations,
   eyebrow,
   title,
   description,
+  backRoute,
 }) => {
   const [activeAnimation, setActiveAnimation] = useState(0);
   const [activeFile, setActiveFile] = useState(0);
@@ -46,7 +48,20 @@ const CodeUiReusable = ({
     <main className="min-h-screen bg-[#f5f5f5] px-3 py-10 sm:px-5 sm:py-16 md:py-20">
       <div className="mx-auto w-full max-w-[1100px]">
 
-        {/* ================= HEADER ================= */}
+
+        <div className="mb-5 sm:mb-6">
+          <Link
+            to={backRoute}
+            className="group inline-flex items-center gap-1.5 rounded-lg border border-[#d7d7d7] bg-white px-3 py-2 text-xs font-semibold text-[#333] no-underline shadow-sm transition-all duration-200 hover:border-[#111] hover:bg-[#111] hover:text-white hover:shadow-md sm:gap-2 sm:px-3.5 sm:py-2.5 sm:text-sm"
+          >
+            <MdOutlineArrowBackIos
+              className="text-[11px] transition-transform duration-200 group-hover:-translate-x-0.5 sm:text-xs"
+            />
+
+            <span>Back</span>
+          </Link>
+        </div>
+
 
         <div className="mb-8 text-center sm:mb-10">
           <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#888] sm:mb-3 sm:text-xs">
@@ -62,7 +77,6 @@ const CodeUiReusable = ({
           </p>
         </div>
 
-        {/* ================= ANIMATION TABS ================= */}
 
         <div className="mx-auto mb-6 flex w-full max-w-full items-center gap-1 overflow-x-auto rounded-xl border border-[#dedede] bg-[#e9e9e9] p-1.5 sm:mb-8 sm:w-fit">
           {animations.map((animation, index) => {
@@ -85,11 +99,9 @@ const CodeUiReusable = ({
           })}
         </div>
 
-        {/* ================= CODE SECTION ================= */}
 
         <section className="overflow-hidden rounded-xl border border-[#dcdcdc] bg-white shadow-[0_10px_40px_rgba(0,0,0,0.06)] sm:rounded-2xl">
 
-          {/* ================= FILE TABS HEADER ================= */}
 
           <div className="flex min-h-[58px] items-center justify-between border-b border-[#e5e5e5] bg-[#fafafa]">
 
@@ -141,15 +153,12 @@ const CodeUiReusable = ({
             </button>
           </div>
 
-          {/* ================= CODE EDITOR ================= */}
 
           <div className="bg-white">
 
-            {/* EDITOR TOP BAR */}
 
             <div className="flex h-[42px] items-center border-b border-[#e5e5e5] bg-[#fafafa] px-3 sm:h-[46px] sm:px-4">
 
-              {/* Window dots */}
 
               <div className="flex items-center gap-1.5">
                 <span className="h-2 w-2 rounded-full bg-[#ff5f57] sm:h-2.5 sm:w-2.5" />
@@ -157,7 +166,6 @@ const CodeUiReusable = ({
                 <span className="h-2 w-2 rounded-full bg-[#28c840] sm:h-2.5 sm:w-2.5" />
               </div>
 
-              {/* File name */}
 
               <div className="mx-auto max-w-[50%] -translate-x-4 overflow-hidden rounded-md bg-[#eeeeee] px-2.5 py-1 sm:-translate-x-8 sm:px-3">
                 <span className="block truncate font-mono text-[10px] font-medium text-[#666] sm:text-[11px]">
@@ -166,7 +174,6 @@ const CodeUiReusable = ({
               </div>
             </div>
 
-            {/* CODE */}
 
             <div className="max-h-[400px] overflow-auto sm:max-h-[500px]">
               <SyntaxHighlighter
@@ -205,7 +212,6 @@ const CodeUiReusable = ({
           </div>
         </section>
 
-        {/* ================= EXPLORE BUTTON ================= */}
 
         <div className="mt-6 flex justify-center sm:mt-8">
           <Link

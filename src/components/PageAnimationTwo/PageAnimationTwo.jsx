@@ -1,6 +1,7 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, useLocation, useOutlet } from "react-router-dom";
+import { MdOutlineArrowBackIos } from "react-icons/md";
 
 const expand = {
   initial: {
@@ -33,8 +34,6 @@ const expand = {
   }),
 };
 
-
-
 const PageAnimationTwo = () => {
   const location = useLocation();
   const outlet = useOutlet();
@@ -43,13 +42,25 @@ const PageAnimationTwo = () => {
 
   return (
     <div className="relative min-h-screen">
-      
       {/* PAGE CONTENT */}
 
       <header className="flex flex-col p-10">
-        <span className="text-[24px] font-black uppercase">
-          Page Animation Two
-        </span>
+        <div className="flex gap-4">
+          <div className="mb-5 sm:mb-6">
+            <Link
+              to="/page-animation"
+              className="group inline-flex items-center gap-1.5 rounded-lg border border-[#d7d7d7] bg-white px-3 py-2 text-xs font-semibold text-[#333] no-underline shadow-sm transition-all duration-200 hover:border-[#111] hover:bg-[#111] hover:text-white hover:shadow-md sm:gap-2 sm:px-3.5 sm:py-2.5 sm:text-sm"
+            >
+              <MdOutlineArrowBackIos className="text-[11px] transition-transform duration-200 group-hover:-translate-x-0.5 sm:text-xs" />
+
+              <span>Back</span>
+            </Link>
+          </div>
+
+          <span className="text-[24px] font-black uppercase">
+            Page Animation Two
+          </span>
+        </div>
 
         <nav className="mt-4 flex gap-4">
           <Link to="." className="text-[18px] font-semibold">
@@ -75,8 +86,6 @@ const PageAnimationTwo = () => {
           key={location.pathname}
           className="fixed inset-0 z-[50] pointer-events-none"
         >
-          
-
           {/* STAIRCASE COLUMN */}
 
           <div className="fixed left-0 top-0 flex h-screen w-screen pointer-events-none">
