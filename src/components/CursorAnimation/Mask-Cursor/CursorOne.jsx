@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import useMousePosition from "./useMousePosition";
 
+const maskImage =
+  "radial-gradient(circle, black 0%, black 50%, transparent 51%)";
+
 const CursorOne = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -10,63 +13,34 @@ const CursorOne = () => {
   const size = isHovered ? 400 : 40;
 
   return (
-    <main className="relative h-screen w-full overflow-hidden bg-[hsl(0,0%,6%)]">
-      {/* RED MASK LAYER */}
+    <main className="relative h-screen w-full overflow-hidden">
+      {/* MASK */}
       <motion.div
         className="
           absolute inset-0
-          z-10
-          flex h-screen w-full
+          flex h-full w-full
           items-center justify-center
           bg-[#ec4e39]
           text-[#121212]
         "
         style={{
-          maskImage:
-            "radial-gradient(circle, black 0%, black 50%, transparent 51%)",
-
-          WebkitMaskImage:
-            "radial-gradient(circle, black 0%, black 50%, transparent 51%)",
-
-          maskRepeat: "no-repeat",
+          WebkitMaskImage: maskImage,
+          maskImage: maskImage,
           WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
         }}
         animate={{
-          maskPosition: `${x - size / 2}px ${y - size / 2}px`,
           WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
+          maskPosition: `${x - size / 2}px ${y - size / 2}px`,
 
-          maskSize: `${size}px ${size}px`,
+          // IMPORTANT: width AND height
           WebkitMaskSize: `${size}px ${size}px`,
+          maskSize: `${size}px ${size}px`,
         }}
-        // transition={{
-        //   type: "tween",
-        //   ease: "backOut",
-        //   duration: 0.5,
-        // }}
         transition={{
-          maskPosition: {
-            type: "tween",
-            ease: "linear",
-            duration: 1,
-          },
-
-          WebkitMaskPosition: {
-            type: "tween",
-            ease: "linear",
-            duration: 0.1,
-          },
-
-          maskSize: {
-            type: "tween",
-            ease: "backOut",
-            duration: 5,
-          },
-
-          WebkitMaskSize: {
-            type: "tween",
-            ease: "backOut",
-            duration: 0.5,
-          },
+          type: "tween",
+          ease: "backOut",
+          duration: 0.5,
         }}
       >
         <p
@@ -75,9 +49,8 @@ const CursorOne = () => {
             p-10
             text-[64px]
             font-bold
-            leading-[64px]
+            leading-[66px]
             cursor-default
-            select-none
           "
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -87,15 +60,14 @@ const CursorOne = () => {
         </p>
       </motion.div>
 
-      {/* NORMAL LAYER */}
+      {/* BODY */}
       <div
         className="
-          absolute inset-0
           flex h-screen w-full
           items-center justify-center
           text-[64px]
           font-bold
-          leading-[64px]
+          leading-[66px]
           text-[#afa18f]
         "
       >
