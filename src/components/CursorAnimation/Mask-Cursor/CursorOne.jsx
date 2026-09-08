@@ -14,7 +14,6 @@ const CursorOne = () => {
 
   return (
     <main className="relative h-screen w-full overflow-hidden">
-      {/* MASK */}
       <motion.div
         className="
           absolute inset-0
@@ -33,7 +32,6 @@ const CursorOne = () => {
           WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
           maskPosition: `${x - size / 2}px ${y - size / 2}px`,
 
-          // IMPORTANT: width AND height
           WebkitMaskSize: `${size}px ${size}px`,
           maskSize: `${size}px ${size}px`,
         }}
