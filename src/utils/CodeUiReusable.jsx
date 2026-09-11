@@ -24,7 +24,6 @@ const CodeUiReusable = ({
 
   const currentFile = currentFiles?.[activeFile];
 
-  
   const hasCode =
     typeof currentFile?.code === "string" && currentFile.code.trim().length > 0;
 
@@ -87,7 +86,6 @@ const CodeUiReusable = ({
           </p>
         </div>
 
-
         {animations.length > 0 && (
           <div className="mx-auto mb-6 flex w-full max-w-full items-center gap-1 overflow-x-auto rounded-xl border border-[#dedede] bg-[#e9e9e9] p-1.5 sm:mb-8 sm:w-fit">
             {animations.map((animation, index) => {
@@ -112,9 +110,7 @@ const CodeUiReusable = ({
         )}
 
         <section className="overflow-hidden rounded-xl border border-[#dcdcdc] bg-white shadow-[0_10px_40px_rgba(0,0,0,0.06)] sm:rounded-2xl">
-
           <div className="flex min-h-[58px] items-center justify-between border-b border-[#e5e5e5] bg-[#fafafa]">
-
             {currentFiles.length > 0 && (
               <div className="flex h-[58px] min-w-0 flex-1 items-stretch overflow-x-auto">
                 {currentFiles.map((file, index) => {
@@ -142,7 +138,6 @@ const CodeUiReusable = ({
               </div>
             )}
 
-
             {hasCode && (
               <button
                 type="button"
@@ -163,7 +158,6 @@ const CodeUiReusable = ({
               </button>
             )}
           </div>
-
 
           {hasCode && (
             <div className="bg-white">
@@ -219,10 +213,11 @@ const CodeUiReusable = ({
           )}
         </section>
 
-
         <div className="mt-6 flex justify-center sm:mt-8">
           <Link
             to={currentAnimation.route}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-xl border border-[#d7d7d7] bg-white px-5 py-3 text-xs font-semibold text-[#111] no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#111] hover:bg-[#111] hover:text-white hover:shadow-lg sm:gap-3 sm:px-6 sm:py-3.5 sm:text-sm"
           >
             <span>Explore Animation</span>
