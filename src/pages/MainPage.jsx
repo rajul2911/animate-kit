@@ -8,7 +8,7 @@ import Card from "./Card";
 
 const MainPage = () => {
   const collectionText =
-    "A collection of creative UI animations, interaction and motion experiments built with React, Tailwind, Framer Motion. Learn, explore and get inspired.";
+    "A collection of creative UI animations, interaction and motion experiments built with React, Tailwind, Motion. Learn, explore and get inspired.";
 
   const [displayText, setDisplayText] = useState("");
 

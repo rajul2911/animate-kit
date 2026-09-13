@@ -25,12 +25,12 @@ const details = [
   },
   {
     id: 3,
-    Head: "Text Animations",
+    Head: "Menu Animations",
     Des: "Creative text reveals and typography effects.",
     icon: <GoStack />,
     iconColor: "text-[#e7439b]",
     bgcolor: "bg-[#fdeaf5]",
-    to: "/text-animation",
+    to: "/menu-animation",
   },
   {
     id: 4,

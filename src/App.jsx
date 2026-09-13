@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import PageAnimationRoutes from "./RouteConfig/PageAnimationRoutes";
 import ScrollAnimationRoute from "./RouteConfig/ScrollAnimationRoute";
 import CursorAnimationRoutes from "./RouteConfig/CursorAnimationRoutes";
+import MenuAnimationRoutes from "./RouteConfig/MenuAnimationRoutes";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -37,6 +38,10 @@ const App = () => {
         <Route
           path="/cursor-effects/*"
           element={<CursorAnimationRoutes />}
+        />
+        <Route
+          path="/menu-animation/*"
+          element={<MenuAnimationRoutes />}
         />
       </Routes>
 
