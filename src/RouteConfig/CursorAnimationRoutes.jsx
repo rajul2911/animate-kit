@@ -9,7 +9,7 @@ const CursorAnimationRoutes = () => {
     <Routes>
         <Route index  element={<CursorAnimation/>}/>
        
-        <Route path='/cursor-one' element={<CursorOne/>}/>
+        <Route path='cursor-one' element={<CursorOne/>}/>
 
     </Routes>
     

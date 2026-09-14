@@ -8,9 +8,9 @@ const MenuAnimation = () => {
     <>
        <CodeUiReusable
       animations={menucode}
-      eyebrow="Menu Transitions"
+      eyebrow="Menu Animation"
       title="Menu Animation"
-      description="Explore different Menu transition animations and their source code."
+      description="Explore different menu animations and their source code."
        backRoute="/"
     />
     </>
