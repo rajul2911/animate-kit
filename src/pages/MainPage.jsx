@@ -3,12 +3,13 @@ import { motion } from "motion/react";
 import lab from "../assests/motionlab.png";
 import text from "../assests/text.png";
 import icon from "../assests/righticon.png";
-import { FaStar } from "react-icons/fa6";
+import { FaStar, FaGithub } from "react-icons/fa6";
 import Card from "./Card";
+// import NavBar from "./NavBar";
 
 const MainPage = () => {
   const collectionText =
-    "A collection of creative UI animations, interaction and motion experiments built with React, Tailwind, Motion. Learn, explore and get inspired.";
+    "A collection of creative UI animations, interaction and motion experiments built with React, Tailwind, Motion. Explore, learn and use these components to make your website feel alive.";
 
   const [displayText, setDisplayText] = useState("");
 
@@ -29,65 +30,25 @@ const MainPage = () => {
 
   return (
     <>
-    <main className=" bg-white text-neutral-900 overflow-hidden">
-
-
-      {/* Navbar */}
-
-      <motion.nav
-        initial={{ y: -40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="w-full mx-auto flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-12 py-4"
-      >
-        <motion.img
-          src={lab}
-          alt="Motion Lab logo"
-          className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 object-contain"
-          animate={{
-            rotate: [0, 4, -4, 0],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-
-        <p className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-wide">
-          AnimateKit
-        </p>
-      </motion.nav>
-
-
-
-      {/* Hero */}
-
-
-
-      <section className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-10 sm:pt-16 lg:pt-20 pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.7fr_1fr] gap-10 lg:gap-8 items-center">
-
-
-          {/* LEFT TEXT IMAGE */}
-
-
+      <main className="relative overflow-hidden bg-white text-neutral-900">
+        {/* ================= HERO ================= */}
+        <section className="relative mx-auto w-full max-w-7xl px-5 pb-12 pt-14 sm:px-8 sm:pb-14 sm:pt-16 lg:px-12 lg:pb-16 lg:pt-20">
           <motion.div
-            initial={{ x: -80, opacity: 0 }}
+            initial={{ x: -60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
-              duration: 0.9,
+              duration: 0.8,
               ease: "easeOut",
               delay: 0.2,
             }}
-            className="hidden lg:flex justify-center"
+            className="pointer-events-none absolute left-0 top-[55%] hidden -translate-y-1/2 md:block lg:left-4 xl:left-8"
           >
             <motion.img
               src={text}
               alt="Small Interactions Big Ideas"
-              className="w-40 xl:w-48 object-contain"
+              className="w-28 object-contain lg:w-32 xl:w-36"
               animate={{
-                y: [0, -50, 0],
+                y: [0, -20, 0],
                 rotate: [-2, 1, -2],
               }}
               transition={{
@@ -98,17 +59,42 @@ const MainPage = () => {
             />
           </motion.div>
 
-          {/* CENTER CONTENT */}
-          <div className="text-center lg:text-left">
+          <motion.div
+            initial={{ x: 70, opacity: 0, scale: 0.9 }}
+            animate={{ x: 0, opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.3,
+              ease: "easeOut",
+            }}
+            className="pointer-events-none absolute right-0 top-100 hidden md:block lg:right-0 xl:right-4"
+          >
+            <motion.img
+              src={icon}
+              alt="Motion illustration"
+              className="w-40 object-contain sm:w-48 lg:w-56 xl:w-64"
+              animate={{
+                y: [0, -12, 0],
+                rotate: [0, 2, -2, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          </motion.div>
+
+          <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center text-center">
             {/* Badge */}
             <motion.div
-              initial={{ y: 25, opacity: 0 }}
+              initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{
-                duration: 0.7,
-                delay: 0.4,
+                duration: 0.6,
+                delay: 0.3,
               }}
-              className="inline-flex items-center gap-2 border border-neutral-300 rounded-full py-2 px-4 mb-6"
+              className="mb-5 inline-flex items-center gap-2 rounded-full border border-neutral-300 px-3 py-1.5 sm:mb-6 sm:px-4"
             >
               <motion.div
                 animate={{
@@ -120,70 +106,47 @@ const MainPage = () => {
                   ease: "linear",
                 }}
               >
-                <FaStar className="text-blue-700 text-sm" />
+                <FaStar className="text-xs text-blue-700 sm:text-sm" />
               </motion.div>
 
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-neutral-600">
+              <span className="text-[9px] uppercase tracking-[0.18em] text-neutral-600 sm:text-[10px] sm:tracking-[0.2em]">
                 Explore • Animate • Create
               </span>
             </motion.div>
 
-
-
-            {/* Heading */}
-
-
             <motion.h1
-              initial={{ y: 50, opacity: 0 }}
+              initial={{ y: 35, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{
-                duration: 0.9,
-                delay: 0.5,
+                duration: 0.8,
+                delay: 0.4,
                 ease: "easeOut",
               }}
-              className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold leading-[0.95] tracking-tight"
+              className="max-w-5xl text-4xl font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[78px]"
             >
-              Turn Ideas Into
-              <br />
-              <motion.span
-                className="bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent"
-                animate={{
-                  backgroundPosition: ["0%", "100%", "0%"],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                Beautiful Motions
-              </motion.span>
+              Turn Ideas Into Beautiful Motion
             </motion.h1>
 
-
-
-            {/* Collection text */}
-
-
             <motion.div
-              initial={{ y: 30, opacity: 0 }}
+              initial={{ y: 25, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{
                 duration: 0.7,
-                delay: 0.8,
+                delay: 0.7,
               }}
-              className="mt-7 max-w-2xl mx-auto lg:mx-0"
+              className="mt-5 w-full max-w-3xl sm:mt-6"
             >
-              <p className="text-sm sm:text-base lg:text-lg text-neutral-600 leading-7">
+              <p className="text-sm leading-6 text-neutral-600 sm:text-base sm:leading-7 md:text-lg lg:text-lg">
                 <span className="font-mono">
                   {displayText}
+
                   <motion.span
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{
                       duration: 0.8,
                       repeat: Infinity,
                     }}
-                    className="ml-1 text-blue-600 font-bold"
+                    className="ml-1 font-bold text-blue-600"
                   >
                     |
                   </motion.span>
@@ -191,152 +154,67 @@ const MainPage = () => {
               </p>
             </motion.div>
 
-            {/* Buttons */}
-            {/* <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+            {/* Mobile Illustration */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.7,
-                delay: 1,
+                delay: 0.9,
               }}
-              className="mt-8 flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4"
+              className="mt-7 flex flex-col items-righ md:hidden"
             >
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0px 10px 35px rgba(79,70,229,0.25)",
+              <motion.img
+                src={icon}
+                alt="Motion illustration"
+                className="w-52 object-contain sm:w-60"
+                animate={{
+                  y: [0, -10, 0],
+                  rotate: [0, 2, -2, 0],
                 }}
-                whileTap={{ scale: 0.96 }}
-                className="px-7 py-3.5 rounded-full text-white bg-gradient-to-r from-blue-600 to-purple-600 font-medium"
-              >
-                Explore Animations →
-              </motion.button>
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.96 }}
-                className="flex items-center gap-3 text-neutral-700 font-medium"
-              >
-                <span className="w-11 h-11 rounded-full border border-neutral-300 flex items-center justify-center">
-                  ▶
-                </span>
-
-                Watch Demo
-              </motion.button>
-            </motion.div> */}
-
-            {/* Stats */}
-            {/* <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                duration: 0.7,
-                delay: 1.2,
-              }}
-              className="mt-12 flex justify-center lg:justify-start gap-6 sm:gap-10"
-            >
-              <div>
-                <p className="text-2xl font-bold">20+</p>
-                <p className="text-xs sm:text-sm text-neutral-500">
-                  Animation Examples
-                </p>
-              </div>
-
-              <div className="w-px bg-neutral-300" />
-
-              <div>
-                <p className="text-2xl font-bold">8</p>
-                <p className="text-xs sm:text-sm text-neutral-500">
-                  Categories
-                </p>
-              </div>
-
-              <div className="w-px bg-neutral-300" />
-
-              <div>
-                <p className="text-2xl font-bold">100%</p>
-                <p className="text-xs sm:text-sm text-neutral-500">
-                  Open Source
-                </p>
-              </div>
-            </motion.div> */}
+              <img
+                src={text}
+                alt="Small Interactions Big Ideas"
+                className="mt-2 w-32 object-contain"
+              />
+            </motion.div>
           </div>
+        </section>
 
-          {/* RIGHT IMAGE */}
+        <section className="mx-auto w-full max-w-7xl px-5 pb-8 pt-4 sm:px-8 sm:pb-10 lg:px-12 lg:pt-6">
           <motion.div
-            initial={{ x: 100, opacity: 0, scale: 0.85 }}
-            animate={{ x: 0, opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1,
-              delay: 0.3,
-              ease: "easeOut",
-            }}
-            className="flex justify-center items-center"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+            className="mx-auto max-w-5xl text-center"
           >
-            <motion.img
-              src={icon}
-              alt="Motion illustration"
-              className="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[500px] object-contain"
-              animate={{
-                y: [0, -15, 0],
-                rotate: [0, 2, -2, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-purple-600 sm:text-sm lg:text-base">
+              Animation Categories
+            </p>
+
+            <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+              Choose a Category
+            </h2>
+
+            <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-neutral-500 sm:text-base sm:leading-7 md:text-lg lg:text-xl">
+              Browse different types of animations and interactions. Click on
+              any category to see examples and get the code.
+            </p>
           </motion.div>
-        </div>
+        </section>
+      </main>
 
-        {/* Mobile Small Interaction Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="lg:hidden flex justify-center mt-10"
-        >
-          <img
-            src={text}
-            alt="Small Interactions Big Ideas"
-            className="w-40 sm:w-52 object-contain"
-          />
-        </motion.div>
-      </section>
-
-      {/* Category Section */}
-
-      <section className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <p className="text-xs uppercase tracking-[0.3em] text-purple-600 font-semibold">
-            Animation Categories
-          </p>
-
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold">
-            Choose a Category
-          </h2>
-
-          <p className="mt-3 text-neutral-500">
-            Explore different types of animations and interactions.
-          </p>
-        </motion.div>
-      </section>
-    </main>
-
-
-    <Card/>
-
-
+      {/* Cards */}
+      <Card />
     </>
-
   );
 };
 
