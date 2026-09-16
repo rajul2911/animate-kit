@@ -1,51 +1,66 @@
-import { useScroll, useTransform,motion  } from 'motion/react';
-import React, { useRef } from 'react'
+import { motion, useScroll, useTransform } from "motion/react";
+import React, { useRef } from "react";
 
-
-const fontStyles = `
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-`;
-const paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+const paragraph =
+  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout";
 
 const TextGradient = () => {
+  const container = useRef(null);
 
-    const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start 0.9", "start 0.25"],
+  });
 
-    const {scrollYProgress} = useScroll({
-        target:container,
-        offset:['start 0.9', 'start 0.25']
-    })
-
-    const element = useRef(null);
-
-    const {scrollYProgressBar} = useScroll({
-        target:element,
-        offset:['start 0.9', 'start 0.25']
-    })
-
-    const words = paragraph.split(" ");
-
+  const words = paragraph.split(" ");
 
   return (
+    <div className="flex flex-col bg-[rgb(24,24,24)]">
+      <div className="h-screen" />
+      <p
+        ref={container}
+        className='flex max-w-[1280px] flex-wrap p-[40px]  text-[50px] font-black italic leading-none text-white'
+      >
+        <motion.p
+          style={{ opacity: scrollYProgress }}
+          ref={container}
+          className='max-w-full p-[40px] text-[50px] font-black italic leading-none text-white'
+        >
+          {paragraph}
+        </motion.p>
 
-    <div className='bg-[rgb(24,24,24)] flex flex-col'>
-        <div className="h-[100vh] "></div>
+        {words.map((word, index) => {
+          const start = index / words.length;
+          const end = start + 1 / words.length;
 
-        {/* <motion.p style={{opacity:scrollYProgress}} ref={container} className=' text-[50px] max-w-full p-[40px] font-["Playfair_Display"] italic font-black text-white'>{paragraph}</motion.p> */}
+          return (
+            <Word
+              key={`${word}-${index}`}
+              range={[start, end]}
+              progress={scrollYProgress}
+            >
+              {word}
+            </Word>
+          );
+        })}
+      </p>
 
-        <p className=' text-[50px] max-w-full p-[40px] font-["Playfair_Display"] italic font-black text-white flex flex-wrap leading-1'>
-            
-            {words.map((word,index)=>(
-                <span key={index} className='mr-[12px] mt-[12px]'>{word}</span>
-
-            ))}
-
-        </p>
-
-        <div className='h-[100vh] '></div>
-
+      {/* Bottom spacing */}
+      <div className="h-screen" />
     </div>
-  )
-}
+  );
+};
 
-export default TextGradient
+export default TextGradient;
+
+const Word = ({ children, range, progress }) => {
+  const opacity = useTransform(progress, range, [0, 1]);
+
+  return (
+    <span className="relative mr-[12px] mt-[12px]">
+      <span className="absolute opacity-20">{children}</span>
+
+      <motion.span style={{ opacity }}>{children}</motion.span>
+    </span>
+  );
+};
