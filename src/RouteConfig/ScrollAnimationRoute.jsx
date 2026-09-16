@@ -4,6 +4,7 @@ import ScrollAnimation from '../pages/ScrollAnimation'
 import ScrollOne from '../components/ScrollAnimationAll/Parallax Scroll/ScrollOne'
 import ScrollCard from '../components/ScrollAnimationAll/CardScrollParallax/ScrollCard'
 import ZoomParallax from '../components/ScrollAnimationAll/ZoomParallax/ZoomParallax'
+import TextGradient from '../components/ScrollAnimationAll/TextGradient/TextGradient'
 
 const ScrollAnimationRoute = () => {
   return (
@@ -16,6 +17,8 @@ const ScrollAnimationRoute = () => {
 
         <Route path='scroll-animation-two' element={<ScrollCard/>}/>
         <Route path='scroll-animation-three' element={<ZoomParallax/>}/>
+        <Route path='scroll-animation-four' element={<TextGradient/>}/>
+
 
         
 

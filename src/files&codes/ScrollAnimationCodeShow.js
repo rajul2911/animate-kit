@@ -418,4 +418,10 @@ export default ZoomParallax;`,
       },
     ],
   },
+  {
+    id: "scroll-four",
+    name: "Text Gradient",
+    route: "scroll-animation-four",
+  },
+
 ];
