@@ -9,7 +9,7 @@ const TextGradient = () => {
 
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start 0.9", "start 0.25"],
+    offset: ["start 60vh", "start 15vh"],
   });
 
   const words = paragraph.split(" ");
@@ -17,14 +17,15 @@ const TextGradient = () => {
   return (
     <div className="flex flex-col bg-[rgb(24,24,24)]">
       <div className="h-screen" />
+
       <p
         ref={container}
-        className='flex max-w-[1280px] flex-wrap p-[40px]  text-[50px] font-black italic leading-none text-white'
+        className="flex max-w-[1280px] flex-wrap p-[5vw] text-[50px] font-black italic leading-none text-white"
       >
         <motion.p
           style={{ opacity: scrollYProgress }}
           ref={container}
-          className='max-w-full p-[40px] text-[50px] font-black italic leading-none text-white'
+          className="max-w-full p-[5vw] text-[50px]font-black italic leading-none text-white"
         >
           {paragraph}
         </motion.p>
@@ -45,7 +46,6 @@ const TextGradient = () => {
         })}
       </p>
 
-      {/* Bottom spacing */}
       <div className="h-screen" />
     </div>
   );
