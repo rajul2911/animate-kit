@@ -31,7 +31,6 @@ const MainPage = () => {
   return (
     <>
       <main className="relative overflow-hidden bg-white text-neutral-900">
-        {/* ================= HERO ================= */}
         <section className="relative mx-auto w-full max-w-7xl px-5 pb-12 pt-14 sm:px-8 sm:pb-14 sm:pt-16 lg:px-12 lg:pb-16 lg:pt-20">
           <motion.div
             initial={{ x: -60, opacity: 0 }}
@@ -86,7 +85,6 @@ const MainPage = () => {
           </motion.div>
 
           <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center text-center">
-            {/* Badge */}
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -124,7 +122,12 @@ const MainPage = () => {
               }}
               className="max-w-5xl text-4xl font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[78px]"
             >
-              Turn Ideas Into Beautiful Motion
+              {/* Turn Ideas Into Beautiful Motion */}
+               Turn Ideas Into
+              <br />
+              <span className="bg-[linear-gradient(45deg,#1dd1a1_0%,#ff6b6b_37%,#48dbfb_41%,#feca57_68%)] bg-clip-text text-transparent">
+                Beautiful Motion
+              </span>
             </motion.h1>
 
             <motion.div
@@ -154,7 +157,7 @@ const MainPage = () => {
               </p>
             </motion.div>
 
-            {/* Mobile Illustration */}
+            {/* Mobile */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -212,7 +215,7 @@ const MainPage = () => {
         </section>
       </main>
 
-      {/* Cards */}
+      
       <Card />
     </>
   );

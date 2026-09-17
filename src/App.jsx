@@ -11,6 +11,7 @@ import PageAnimationRoutes from "./RouteConfig/PageAnimationRoutes";
 import ScrollAnimationRoute from "./RouteConfig/ScrollAnimationRoute";
 import CursorAnimationRoutes from "./RouteConfig/CursorAnimationRoutes";
 import MenuAnimationRoutes from "./RouteConfig/MenuAnimationRoutes";
+import About from "./pages/About";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -30,6 +31,9 @@ const App = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<MainPage />} />
+          <Route path="/about" element={<About />} />
+          
+
         </Route>
 
         <Route path="/page-animation/*" element={<PageAnimationRoutes />} />
