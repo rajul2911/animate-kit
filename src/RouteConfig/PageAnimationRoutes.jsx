@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import PageAnimation from "../pages/PageAnimation";
 import PageAnimationOne from "../components/PageAnimationOne/PageAnimationOne";
 import PageAnimationTwo from "../components/PageAnimationTwo/PageAnimationTwo";
 import PageAnimationTHree from "../components/PageAnimationThree/PageAnimationTHree";
+import PageAnimation from "../pages/CardsMainANimation/PageAnimation";
 
 const PageAnimationRoutes = () => {
   return (

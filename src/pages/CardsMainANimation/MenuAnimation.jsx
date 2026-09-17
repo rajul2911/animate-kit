@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CodeUiReusable from "../utils/CodeUiReusable";
-import { menucode } from "../files&codes/MenuAnimationCodeShow";
+import CodeUiReusable from "../../utils/CodeUiReusable";
+import { menucode } from "../../files&codes/MenuAnimationCodeShow";
 
 const MenuAnimation = () => {
   return (

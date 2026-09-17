@@ -1,6 +1,6 @@
 import React from "react";
-import { animations } from "../files&codes/PageAnimationCodeShow";
-import CodeUiReusable from "../utils/CodeUiReusable";
+import CodeUiReusable from "../../utils/CodeUiReusable";
+import { animations } from "../../files&codes/PageAnimationCodeShow";
 
 const PageAnimation = () => {
   return (

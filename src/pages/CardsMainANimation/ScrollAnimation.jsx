@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { SWcrollAnimations } from '../files&codes/ScrollAnimationCodeShow'
-import CodeUiReusable from '../utils/CodeUiReusable'
+import CodeUiReusable from '../../utils/CodeUiReusable'
+import { SWcrollAnimations } from '../../files&codes/ScrollAnimationCodeShow'
 
 const ScrollAnimation = () => {
   return (

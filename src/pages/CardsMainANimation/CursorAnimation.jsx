@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { cursoreffect } from '../files&codes/CursorEffectCodeShow'
-import CodeUiReusable from '../utils/CodeUiReusable'
+import CodeUiReusable from '../../utils/CodeUiReusable'
+import { cursoreffect } from '../../files&codes/CursorEffectCodeShow'
 
 const CursorAnimation = () => {
   return (
