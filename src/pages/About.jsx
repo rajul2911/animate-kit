@@ -19,6 +19,7 @@ import signature from "../assests/about/signature.png";
 import feedback from "../assests/about/feedback.png";
 import { MdEmail } from "react-icons/md";
 import { BsBox } from "react-icons/bs";
+import { motion } from "motion/react";
 
 const About = () => {
   const detail = [
@@ -88,15 +89,25 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden scrollbar_hide">
-      <div className="max-w-[1280px] mx-auto px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:py-[3%]">
+    <div className="w-full overflow-x-hidden scrollbar_hide">
+      <div className="max-w-[1400px] mx-auto px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:py-[8%]">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-8">
-          <div className="flex w-full flex-col px-0 sm:px-2 lg:w-[58%] lg:px-3">
+          <motion.div
+            initial={{ x: -3000 }}
+            animate={{ x: 0 }}
+            transition={{
+              type: "tween",
+              duration: 1.5,
+              // delay: 0.5,
+              velocity: 0.6,
+            }}
+            className="flex w-full flex-col px-0 sm:px-2 lg:w-[80%] lg:px-3"
+          >
             <div className="w-fit rounded-xl border border-purple-200 bg-white px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-purple-600 sm:px-4 sm:py-2 sm:text-xs lg:text-sm">
               About AnimateKit
             </div>
 
-            <h2 className="mt-5 text-start text-[42px] font-black leading-[0.95] tracking-[-0.04em] text-[#101828] sm:text-[54px] md:text-[62px] lg:mt-6 lg:text-[68px] xl:text-[72px]">
+            <h2 className="mt-5 text-start text-[42px] font-black leading-[0.95] tracking-[-0.04em] text-[#101828] sm:text-[54px] md:text-[62px] lg:mt-6 lg:text-[68px] xl:text-[85px]">
               Small Interactions.
               <br />
               <span className="bg-[linear-gradient(45deg,#1dd1a1_0%,#ff6b6b_37%,#48dbfb_41%,#feca57_68%)] bg-clip-text text-transparent">
@@ -105,10 +116,13 @@ const About = () => {
             </h2>
 
             <p className="mt-5 max-w-[680px] text-left text-[15px] leading-6 tracking-wide text-gray-600 sm:mt-6 sm:text-[17px] sm:leading-7 md:text-[19px] lg:text-[20px] xl:text-[21px]">
-              AnimateKit is a growing collection of UI animations, interactions
-              and motion experiments built with React, Tailwind CSS and Framer
-              Motion. I created this project to explore how thoughtful motion
-              can make interfaces feel more responsive, expressive and alive.
+              AnimateKit is a growing collection of modern UI animations,
+              interactive components, page transitions, and motion experiments
+              built with React, Tailwind CSS, and Framer Motion. I created this
+              project as a dedicated space to explore creative frontend
+              interactions, experiment with different animation techniques, and
+              understand how motion can improve the overall user experience.
+              <br />
             </p>
 
             {/* DETAILS */}
@@ -136,20 +150,38 @@ const About = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="mt-10 flex w-full items-center justify-center lg:mt-0 lg:w-[42%] lg:justify-end">
+          <motion.div
+            initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            transition={{
+              type: "tween",
+              duration: 1.5,
+              velocity: 0.6,
+            }}
+            className="mt-10 flex w-full items-center justify-center lg:mt-0 lg:w-[55%] lg:justify-end"
+          >
             <img
               src={im}
               alt="AnimateKit illustration"
               className="h-auto w-full max-w-[430px] object-contain sm:max-w-[500px] lg:max-w-[540px]"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 
       <div className="mx-auto mt-10 flex w-[92%] max-w-[1280px] flex-col divide-y divide-neutral-200 lg:w-[90%] lg:flex-row lg:divide-x lg:divide-y-0">
-        <div className="flex w-full flex-col pb-10 lg:w-[55%] lg:pr-10 lg:pb-0">
+        <motion.div
+          initial={{ x: "-100%",opacity:0 }}
+          whileInView={{ x: 0 ,opacity:1}}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{
+            duration: 1.2,
+            ease: "easeOut",
+          }}
+          className="flex w-full flex-col pb-10 lg:w-[55%] lg:pr-10 lg:pb-0"
+        >
           <div className="w-fit rounded-xl bg-white px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.25em] text-purple-600 sm:px-4 sm:py-2 sm:text-[10px]">
             Tech Stack
           </div>
@@ -183,9 +215,18 @@ const About = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex w-full flex-col pt-10 lg:w-[45%] lg:pl-10 lg:pt-0">
+        <motion.div
+           initial={{ x: "calc(100%)" , opacity:0}}
+          whileInView={{ x: 0 ,opacity:1}}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{
+            duration: 1.2,
+            ease: "easeOut",
+          }}
+          className="flex w-full flex-col pb-10 pl-10 lg:w-[55%] lg:pr-10 lg:pb-0"
+        >
           <div className="w-fit rounded-xl bg-white px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.25em] text-purple-600 sm:px-4 sm:py-2 sm:text-[10px]">
             Why AnimateKit
           </div>
@@ -214,9 +255,18 @@ const About = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="w-full px-4 py-8 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{
+          type: "tween",
+          duration: 1.5,
+        }}
+        className="w-full px-4 py-8 sm:px-6 lg:px-8"
+      >
         <div className="relative mx-auto flex w-full max-w-6xl flex-col overflow-hidden rounded-[28px] border border-white/60 bg-white/45 shadow-[0_20px_70px_rgba(124,58,237,0.10)] backdrop-blur-2xl backdrop-saturate-150 sm:rounded-[32px] lg:min-h-[250px] lg:flex-row">
           <div className="pointer-events-none absolute -left-20 -top-24 h-64 w-64 rounded-full bg-purple-300/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-32 right-10 h-72 w-72 rounded-full bg-blue-200/20 blur-3xl" />
@@ -309,7 +359,7 @@ const About = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="w-full px-4 py-6 sm:px-6 lg:px-8">
         <div className="relative mx-auto flex w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-white/70 bg-white/45 px-5 py-5 shadow-[0_15px_50px_rgba(124,58,237,0.08)] backdrop-blur-2xl backdrop-saturate-150 sm:px-6 sm:py-6 lg:min-h-[100px] lg:flex-row lg:items-center lg:px-7 lg:py-5">
