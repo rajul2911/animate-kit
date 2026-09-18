@@ -1,6 +1,12 @@
 import React from "react";
 import im from "../assests/about/profile.png";
-import { FaArrowRight, FaEnvelope, FaGithub, FaLinkedinIn, FaRegHeart } from "react-icons/fa6";
+import {
+  FaArrowRight,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedinIn,
+  FaRegHeart,
+} from "react-icons/fa6";
 import { HiOutlineLightningBolt } from "react-icons/hi";
 import { RxPeople } from "react-icons/rx";
 import reactimg from "../assests/about/react.svg";
@@ -13,7 +19,6 @@ import signature from "../assests/about/signature.png";
 import feedback from "../assests/about/feedback.png";
 import { MdEmail } from "react-icons/md";
 import { BsBox } from "react-icons/bs";
-
 
 const About = () => {
   const detail = [
@@ -314,8 +319,7 @@ const About = () => {
           <div className="relative z-10 flex shrink-0 items-center justify-center">
             <div className="flex h-14 w-14 items-center justify-center rounded-full border border-purple-100/80 bg-purple-100/60 shadow-[0_5px_25px_rgba(139,92,246,0.10)] backdrop-blur-md sm:h-16 sm:w-16">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 text-white shadow-lg shadow-purple-500/20 sm:h-10 sm:w-10">
-               <BsBox />
-
+                <BsBox />
               </div>
             </div>
           </div>
