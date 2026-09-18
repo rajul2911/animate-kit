@@ -16,7 +16,7 @@ const NavBar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     // { name: "Animations", href: "/animation" },
-    { name: "About", href: "about" },
+    { name: "About", href: "/about" },
     // { name: "Resources", href: "/resources" },
   ];
 
@@ -24,7 +24,6 @@ const NavBar = () => {
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-gray-200/70 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
-        {/* LOGO */}
         <Link to="/" className="flex items-center gap-2">
           <img
             src={lab}
@@ -58,7 +57,7 @@ const NavBar = () => {
                 {link.name}
 
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 h-[2px] w-full rounded-full bg-[#7757ff]" />
+                  <span className="absolute bottom-3 left-0 h-[2px] w-full rounded-full bg-[#7757ff]" />
                 )}
               </Link>
             );

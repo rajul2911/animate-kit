@@ -81,82 +81,53 @@ const details = [
 
 const Card = () => {
   return (
-    <div
-      className="
-        w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-    >
-      <div
-        className="
-          grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5
-        "
-      >
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {details.map((item, index) => (
           <motion.div
             key={item.id}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{
-              duration: 0.5,
+              duration: 0.4,
               delay: index * 0.05,
             }}
             whileHover={{
-              y: -6,
-              boxShadow: "0 18px 40px rgba(30, 41, 59, 0.10)",
+              y: -4,
+              boxShadow: "0 12px 30px rgba(30, 41, 59, 0.08)",
             }}
-            className="
-              relative flex flex-col min-h-[220px] rounded-2xl border border-neutral-200/80 bg-white p-5 sm:p-6 shadow-[0_8px_30px_rgba(30,41,59,0.06)] transition-shadow duration-300 overflow-hidden"
+            className="relative overflow-hidden flex items-center w-full min-h-[100px] rounded-xl border border-neutral-200 bg-white px-4 py-4 shadow-[0_4px_20px_rgba(30,41,59,0.04)] transition-shadow duration-300"
           >
-            <div
-              className=" absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br from-purple-100/60 to-blue-100/30 blur-[1px]"
-            />
+            <div className="absolute -right-6 -top-6 h-16 w-16 rounded-full bg-gradient-to-br from-purple-100/50 to-blue-100/30 blur-[1px]" />
 
             <div
-              className={`
-                relative flex items-center justify-center w-14 h-14 rounded-xl border border-neutral-200 ${item.bgcolor}`}
+              className={`relative flex shrink-0 items-center justify-center w-12 h-12 rounded-xl border border-neutral-200 ${item.bgcolor}`}
             >
               {React.cloneElement(item.icon, {
-                className: `text-[22px] ${item.iconColor}`,
+                className: `text-[20px] ${item.iconColor}`,
               })}
             </div>
 
-            <p
-              className=" relative text-[17px] sm:text-[18px] mt-4 text-neutral-900 font-semibold tracking-tight"
-            >
-              {item.Head}
-            </p>
+            <div className="relative min-w-0 flex-1 ml-3">
+              <p className="text-[14px] sm:text-[15px] font-semibold text-neutral-900 tracking-tight truncate">
+                {item.Head}
+              </p>
 
-            <p
-              className=" relative text-[13px] sm:text-[14px] mt-2 leading-5 text-neutral-500 max-w-[210px]"
-            >
-              {item.Des}
-            </p>
+              <p className="mt-1 text-[11px] sm:text-[12px] leading-[17px] text-neutral-500 line-clamp-2">
+                {item.Des}
+              </p>
+            </div>
 
-            <div className="relative flex items-center justify-between mt-auto pt-6">
-                <Link to={item?.to}>
+            <Link to={item.to} className="relative shrink-0 ml-3">
               <motion.div
                 whileHover={{ x: 3 }}
-                className="flex items-center gap-2 text-[#614ef4] text-[13px] font-semibold cursor-pointer"
-              >
-                <span>Explore</span>
-
-                <FaArrowRight className="text-[12px]" />
-              </motion.div>
-              </Link>
-
-              {/* <motion.div
-                whileHover={{
-                  scale: 1.1,
-                  rotate: -8,
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center w-9 h-9 rounded-full bg-neutral-100 border border-neutral-200
-                  text-neutral-700 cursor-pointer
-                "
+                whileTap={{ scale: 0.9 }}
+                className="flex items-center justify-center w-8 h-8 rounded-full text-neutral-500 hover:text-neutral-900 transition-colors"
               >
                 <FaArrowRight className="text-[11px]" />
-              </motion.div> */}
-            </div>
+              </motion.div>
+            </Link>
           </motion.div>
         ))}
       </div>
