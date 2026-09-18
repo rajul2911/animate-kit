@@ -34,7 +34,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           
 
-        </Route>
+       
 
         <Route path="/page-animation/*" element={<PageAnimationRoutes />} />
 
@@ -43,6 +43,7 @@ const App = () => {
         <Route path="/cursor-effects/*" element={<CursorAnimationRoutes />} />
 
         <Route path="/menu-animation/*" element={<MenuAnimationRoutes />} />
+         </Route>
       </Routes>
 
       <Analytics />

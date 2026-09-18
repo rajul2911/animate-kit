@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  FaGithub,
-  FaLinkedinIn,
-  FaBars,
-  FaXmark,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaBars, FaXmark } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import lab from "../assests/motionlab.png";
+import MegaMenu from "./MegaMenu";
 
 const NavBar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [opneBar, setOpenBar] = useState(false);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -21,9 +18,8 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full border-b border-gray-200/70 bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-
+    <nav className={`fixed left-0 top-0 z-50 w-full border-b border-gray-200/70 bg-white/90 `}>
+      <div className={`mx-auto flex h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 ${opneBar ? " backdrop-blur-md":null }`}>
         <Link to="/" className="flex items-center gap-2">
           <img
             src={lab}
@@ -62,10 +58,10 @@ const NavBar = () => {
               </Link>
             );
           })}
+          <MegaMenu opneBar={opneBar} setOpenBar={setOpenBar} />
         </div>
 
         <div className="hidden items-center gap-2 md:flex">
-
           <a
             href="https://github.com/rajul2911"
             target="_blank"
@@ -97,7 +93,7 @@ const NavBar = () => {
           </a>
         </div>
 
-          {/* Mobile menu button */}
+        {/* Mobile menu button */}
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
@@ -112,10 +108,9 @@ const NavBar = () => {
         </button>
       </div>
 
-          {/* Mobile design */}
+      {/* Mobile design */}
       {isOpen && (
         <div className="border-t border-gray-200/70 bg-white px-4 pb-5 pt-3 shadow-lg md:hidden">
-
           <div className="flex flex-col">
             {navLinks.map((link) => {
               const isActive =
@@ -138,10 +133,11 @@ const NavBar = () => {
                 </Link>
               );
             })}
+
+            <MegaMenu opneBar={opneBar} setOpenBar={setOpenBar} />
           </div>
 
           <div className="mt-4 flex items-center gap-2">
-
             <a
               href="https://github.com/rajul2911"
               target="_blank"

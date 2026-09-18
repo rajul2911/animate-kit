@@ -89,7 +89,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full overflow-x-hidden scrollbar_hide">
+    <div className="w-full overflow-x-hidden">
       <div className="max-w-[1400px] mx-auto px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:py-[8%]">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-8">
           <motion.div
@@ -169,12 +169,41 @@ const About = () => {
             />
           </motion.div>
         </div>
+
+        {/* <div className="absolute  left-1/2 -translate-x-1/2 z-40">
+      <div className="flex flex-col items-center gap-2">
+        <div className="w-8 h-12 border-2 border-[var(--dark)] rounded-2xl flex items-start justify-center p-1">
+          <div className="w-2 h-2 bg-[var(--dark)] rounded-full animate-pulse">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      </div> */}
+
+        <motion.div
+          animate={{ y: [0, 15, 0] }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute left-1/2 top-[45%] flex -translate-x-1/2 flex-col items-center gap-2"
+        >
+          <div className="flex h-[48px] w-[30px] items-start justify-center rounded-full border-[2px] border-[#30343b]">
+            <div className="mt-[7px] h-[6px] w-[6px] rounded-full bg-[#30343b]" />
+          </div>
+
+          <span className="text-[12px] text-[#666]">Scroll</span>
+        </motion.div>
       </div>
 
       <div className="mx-auto mt-10 flex w-[92%] max-w-[1280px] flex-col divide-y divide-neutral-200 lg:w-[90%] lg:flex-row lg:divide-x lg:divide-y-0">
         <motion.div
-          initial={{ x: "-100%",opacity:0 }}
-          whileInView={{ x: 0 ,opacity:1}}
+          initial={{ x: "-100%", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{
             duration: 1.2,
@@ -218,8 +247,8 @@ const About = () => {
         </motion.div>
 
         <motion.div
-           initial={{ x: "calc(100%)" , opacity:0}}
-          whileInView={{ x: 0 ,opacity:1}}
+          initial={{ x: "calc(100%)", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{
             duration: 1.2,
