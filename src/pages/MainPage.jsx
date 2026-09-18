@@ -117,7 +117,7 @@ const MainPage = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{
                 duration: 0.8,
-                delay: 0.4,
+                // delay: 0.4,
                 ease: "easeOut",
               }}
               className="max-w-5xl text-4xl font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[78px]"
@@ -135,7 +135,7 @@ const MainPage = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{
                 duration: 0.7,
-                delay: 0.7,
+                // delay: 0.7,
               }}
               className="mt-5 w-full max-w-3xl sm:mt-6"
             >

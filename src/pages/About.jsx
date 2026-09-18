@@ -88,7 +88,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden scrollbar_hide">
       <div className="max-w-[1280px] mx-auto px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:py-[3%]">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-8">
           <div className="flex w-full flex-col px-0 sm:px-2 lg:w-[58%] lg:px-3">
