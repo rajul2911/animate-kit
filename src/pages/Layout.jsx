@@ -5,7 +5,7 @@ import {
   text,
   curve,
   translate,
-} from "../components/PageAnimationThree/AnimationThree";
+} from "../components/PageAnimationAll/PageAnimationThree/AnimationThree";
 import { AnimatePresence, motion } from "motion/react";
 
 const routes = {

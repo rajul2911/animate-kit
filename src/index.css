@@ -1,14 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
 
-html,
-body {
-  scrollbar-width: none;
+.scrollbar-hide {
   -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
+.scrollbar-hide::-webkit-scrollbar {
   display: none;
+  width: 0;
+  height: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Expletus Sans", sans-serif;
+}
+
+:root {
+  --gradient-aqua-coral: linear-gradient(90deg, oklch(0.61 0.125 185), oklch(0.70 0.16 28));
+
+  --gradient-light-aqua-coral: linear-gradient(145deg, oklch(0.95 0.04 187), oklch(0.94 0.045 27));
+
+  --gradient-warm-aqua: linear-gradient(120deg, oklch(0.985 0.008 80) 0 52%, oklch(0.95 0.04 187) 100%);
+
+  --gradient-detail: linear-gradient(110deg, oklch(0.95 0.04 187), oklch(0.985 0.008 80) 48%, oklch(0.94 0.045 27));
+
+  --gradient-image-fade: linear-gradient(90deg, oklch(0.985 0.008 80), transparent 36%);
+  
+  --background: oklch(0.985 0.008 80);
+  --foreground: oklch(0.22 0.045 235);
+
+  --primary: oklch(0.61 0.125 185);
+  --primary-foreground: oklch(0.99 0.004 80);
+
+  --secondary: oklch(0.95 0.04 187);
+  --secondary-foreground: oklch(0.30 0.075 190);
+
+  --accent: oklch(0.94 0.045 27);
+  --accent-foreground: oklch(0.38 0.10 25);
+
+  --coral: oklch(0.70 0.16 28);
+  --gold: oklch(0.73 0.13 75);
+  --ink-soft: oklch(0.33 0.06 230);
+
+  --card: oklch(1 0 0);
+  --muted: oklch(0.96 0.012 220);
+  --muted-foreground: oklch(0.50 0.036 235);
+  --border: oklch(0.90 0.018 215);
+  --destructive: oklch(0.62 0.20 25);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-coral: var(--coral);
+  --color-gold: var(--gold);
+  --color-ink-soft: var(--ink-soft);
+
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
 }
 /* :root {
   --text: #6b6375;
