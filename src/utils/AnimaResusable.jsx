@@ -112,10 +112,10 @@ const AnimaResusable = ({
   };
 
   return (
-    <main className="min-h-screen w-full bg-[#fffdfa] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 lg:px-10 lg:pt-12">
-      <div className="mx-auto w-full max-w-[1180px]">
+    <main className="min-h-screen w-full bg-[#fffdfa] pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 lg:pt-12">
+      <div className="mx-auto w-full max-w-[1480px]">
         {breadcrumbs && (
-          <div className="mb-7 text-[11px] font-medium text-[#71808a] sm:mb-8 sm:text-xs">
+          <div className="mb-7 text-[11px] font-medium text-muted-foreground sm:mb-8 sm:text-xs">
             {breadcrumbs}
           </div>
         )}
@@ -123,50 +123,50 @@ const AnimaResusable = ({
         <header className="mb-7 flex flex-col gap-6 border-b border-[#d9e2e3] pb-7 sm:mb-8 sm:pb-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[760px]">
             <div className="mb-3 flex flex-wrap items-center gap-2">
-              <h1 className="m-0 text-3xl font-bold tracking-[-0.035em] text-[#062c3d] sm:text-4xl lg:text-5xl">
+              <h1 className="m-0 text-3xl font-bold tracking-[-0.035em] text-foreground sm:text-4xl lg:text-5xl">
                 {title}
               </h1>
 
               {badge && (
-                <span className="rounded-full bg-[#d6f7f3] px-3 py-1.5 text-[10px] font-bold text-[#008e86] sm:text-[11px]">
+                <span className="rounded-full bg-secondary px-3 py-1.5 text-[10px] font-bold text-primary sm:text-[11px]">
                   {badge}
                 </span>
               )}
             </div>
 
             {description && (
-              <p className="m-0 max-w-[680px] text-sm leading-6 text-[#6d7d85] sm:text-base">
+              <p className="m-0 max-w-[680px] text-sm leading-6 text-foreground sm:text-base">
                 {description}
               </p>
             )}
           </div>
 
-          <div className="hidden max-w-[230px] border-l-2 border-[#ff6f61] pl-4 lg:block">
-            <span className="mb-2 block text-2xl leading-none text-[#ff6f61]">
+          <div className="hidden max-w-[230px] border-l-2 border-destructive pl-4 lg:block">
+            <span className="mb-2 block text-2xl leading-none text-destructive">
               “
             </span>
 
-            <p className="m-0 text-xs font-medium leading-5 text-[#526873]">
+            <p className="m-0 text-sm font-bold leading-5 text-ink-soft">
               Smooth animations create seamless experiences.
             </p>
           </div>
         </header>
 
-        <section className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-          <div className="h-fit self-start overflow-hidden rounded-2xl border border-[#d9e3e5] bg-white shadow-[0_8px_30px_rgba(15,50,60,0.05)]">
+        <section className="grid grid-cols-1 gap-5 xl:grid-cols-2">
+          <div className="h-full self-start overflow-hidden rounded-2xl border border-[#d9e3e5] bg-white shadow-[0_8px_30px_rgba(15,50,60,0.05)]">
             <div className="flex h-[54px] items-center border-b border-[#e4ebec] px-4 sm:px-5">
               <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#d8f7f3] text-[#008f88]">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary text-primary">
                   <FiPlay className="text-sm" />
                 </div>
 
-                <span className="text-sm font-bold text-[#092f40]">
+                <span className="text-sm font-bold text-ink-soft">
                   Preview
                 </span>
               </div>
             </div>
 
-            <div className="relative aspect-video w-full h-full overflow-hidden bg-[#edf5f4]">
+            <div className="relative w-full h-full overflow-hidden bg-[#edf5f4]">
               {showVideo ? (
                 <video
                   id="animation-preview-video"
@@ -177,29 +177,30 @@ const AnimaResusable = ({
                   playsInline
                   preload="metadata"
                   onError={() => setVideoError(true)}
-                  className="block h-full w-full object-cover"
+                  className="block h-full w-full object-contain"
                 />
               ) : (
                 <div className="flex h-full w-full flex-col items-center justify-center px-6 text-center">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#d8f7f3] text-[#008f88]">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary">
                     <FiPlay className="ml-0.5 text-lg" />
                   </div>
 
-                  <h3 className="m-0 text-sm font-bold text-[#173845] sm:text-base">
+                  <h3 className="m-0 text-sm font-bold text-foreground sm:text-base">
                     Preview unavailable
                   </h3>
 
-                  <p className="mx-auto mt-2 max-w-[360px] text-[11px] leading-5 text-[#71808a] sm:text-xs">
+                  <p className="mx-auto mt-2 max-w-[360px] text-[11px] leading-5 text-muted-foreground sm:text-xs">
                     The preview video isn't available right now. View the live
                     animation to experience the effect directly.
                   </p>
 
                   {viewAnimationRoute && (
                     <Link
-                      to={viewAnimationRoute}
+                      to={`/${viewAnimationRoute}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#073445] px-4 py-2.5 text-[11px] font-bold text-white no-underline transition-all duration-200 hover:bg-[#0b4b60] sm:text-xs"
+                      className="mt-4 flex items-center gap-2 rounded-lg bg-ink-soft px-4 py-2.5 text-[11px] font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-md sm:w-auto sm:text-sm hover:text-foreground"
+                      // group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#073445] px-6 py-3 text-xs font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-md sm:w-auto sm:text-sm hover:text-foreground
                     >
                       View live animation
                       <FiArrowRight />
@@ -213,7 +214,7 @@ const AnimaResusable = ({
           <div className="overflow-hidden rounded-2xl border border-[#d9e3e5] bg-white shadow-[0_8px_30px_rgba(15,50,60,0.05)]">
             <div className="flex h-[54px] items-center justify-between border-b border-[#e4ebec] px-4 sm:px-5">
               <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#ffe0da] text-[#ef6c5c]">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#ffe0da] text-destructive">
                   <FiCode className="text-sm" />
                 </div>
 
@@ -224,11 +225,11 @@ const AnimaResusable = ({
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="flex cursor-pointer items-center gap-2 rounded-lg border border-[#d8e0e2] bg-white px-3 py-2 text-[11px] font-semibold text-[#314650] shadow-sm transition-all duration-200 hover:border-[#bbb] hover:bg-[#f8faf9] active:scale-95 sm:text-xs"
+                  className="flex cursor-pointer items-center gap-2 rounded-lg border border-[#d8e0e2] bg-white px-3 py-2 text-[11px] font-semibold text-muted-foreground shadow-sm transition-all duration-200 hover:border-[#bbb] active:scale-95 sm:text-xs"
                 >
                   {copied ? (
                     <>
-                      <FiCheck className="text-green-600" />
+                      <FiCheck className="text-primary" />
                       <span>Copied</span>
                     </>
                   ) : (
@@ -253,14 +254,14 @@ const AnimaResusable = ({
                       onClick={() => handleFileChange(index)}
                       className={`relative shrink-0 cursor-pointer border-0 px-3 py-2.5 text-[10px] font-semibold transition-all duration-200 sm:px-4 sm:text-[11px] ${
                         isActive
-                          ? "rounded-t-lg bg-white text-[#00978f]"
-                          : "bg-transparent text-[#61747d] hover:text-[#153a49]"
+                          ? "rounded-t-lg bg-white text-primary"
+                          : "bg-transparent text-secondary-foreground hover:text-ink-soft"
                       }`}
                     >
                       {file?.name || `File ${index + 1}`}
 
                       {isActive && (
-                        <span className="absolute bottom-0 left-0 h-[2px] w-full bg-[#00a69c]" />
+                        <span className="absolute bottom-0 left-0 h-[2px] w-full bg-primary" />
                       )}
                     </button>
                   );
@@ -320,11 +321,11 @@ const AnimaResusable = ({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#cfdcde] bg-white px-6 py-3 text-xs font-bold text-[#173845] no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#173845] hover:shadow-md sm:w-auto sm:text-sm"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#cfdcde] bg-[#181717] px-6 py-3 text-xs font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#173845] hover:shadow-md sm:w-auto sm:text-sm hover:bg-white hover:text-foreground"
             >
               <FiGithub className="text-base" />
 
-              <span>GitHub</span>
+              <span>Source Code</span>
 
               <FiExternalLink className="text-xs opacity-60 transition-transform duration-300 group-hover:translate-x-0.5" />
             </a>
@@ -335,7 +336,7 @@ const AnimaResusable = ({
               to={`/${viewAnimationRoute}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#073445] px-6 py-3 text-xs font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b4b60] hover:shadow-md sm:w-auto sm:text-sm"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#073445] px-6 py-3 text-xs font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-md sm:w-auto sm:text-sm hover:text-foreground"
             >
               <FiPlay className="text-base" />
 
