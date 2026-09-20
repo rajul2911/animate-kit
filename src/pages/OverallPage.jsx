@@ -26,12 +26,10 @@ const OverallPage = () => {
       </header>
 
       {/* Desktop / Tablet Sidebar */}
-      {/* <aside className="hidden h-screen shrink-0 md:block md:pl-6 lg:pl-8 xl:pl-12 2xl:pl-[120px]"> */}
       <aside className="hidden h-screen shrink-0 md:block">
         <SideBar />
       </aside>
 
-      {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 z-50 bg-black/30 md:hidden"
@@ -43,7 +41,6 @@ const OverallPage = () => {
           >
             <div className="flex h-full flex-col">
 
-              {/* Close Button */}
               <div className="flex items-center justify-end px-4 pt-4">
                 <button
                   type="button"
@@ -66,8 +63,6 @@ const OverallPage = () => {
         </div>
       )}
 
-      {/* Main Content */}
-      {/* <main className="min-w-0 flex-1 overflow-y-auto scrollbar-hide pt-16 md:pt-0 md:px-6 lg:px-8 xl:px-12 2xl:px-[120px]"> */}
       <main className="min-w-0 flex-1 overflow-y-auto scrollbar-hide">
         <Outlet />
       </main>
