@@ -114,15 +114,12 @@ const AnimaResusable = ({
   return (
     <main className="min-h-screen w-full bg-[#fffdfa] px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 lg:px-10 lg:pt-12">
       <div className="mx-auto w-full max-w-[1180px]">
-
-        {/* Breadcrumb */}
         {breadcrumbs && (
           <div className="mb-7 text-[11px] font-medium text-[#71808a] sm:mb-8 sm:text-xs">
             {breadcrumbs}
           </div>
         )}
 
-        {/* Header */}
         <header className="mb-7 flex flex-col gap-6 border-b border-[#d9e2e3] pb-7 sm:mb-8 sm:pb-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[760px]">
             <div className="mb-3 flex flex-wrap items-center gap-2">
@@ -155,13 +152,8 @@ const AnimaResusable = ({
           </div>
         </header>
 
-        {/* Preview + Code */}
         <section className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-
-          {/* Preview */}
-          <div className="overflow-hidden rounded-2xl border border-[#d9e3e5] bg-white shadow-[0_8px_30px_rgba(15,50,60,0.05)]">
-
-            {/* Preview Header */}
+          <div className="h-fit self-start overflow-hidden rounded-2xl border border-[#d9e3e5] bg-white shadow-[0_8px_30px_rgba(15,50,60,0.05)]">
             <div className="flex h-[54px] items-center border-b border-[#e4ebec] px-4 sm:px-5">
               <div className="flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#d8f7f3] text-[#008f88]">
@@ -174,51 +166,21 @@ const AnimaResusable = ({
               </div>
             </div>
 
-            {/* Video */}
-            <div className="relative mx-3 mt-3 aspect-video overflow-hidden rounded-xl bg-[#edf5f4] sm:mx-4 sm:mt-4">
-
+            <div className="relative aspect-video w-full h-full overflow-hidden bg-[#edf5f4]">
               {showVideo ? (
-                <>
-                  <video
-                    id="animation-preview-video"
-                    src={videoLink}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    onError={() => setVideoError(true)}
-                    className="h-full w-full object-cover"
-                  />
-
-                  {(mainHead || previewDescription) && (
-                    <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-black/30 via-transparent to-transparent px-5 text-center">
-                      <div className="mt-auto pb-8 sm:pb-10">
-
-                        <span className="mb-2 block text-[9px] font-bold uppercase tracking-[0.2em] text-[#0a9d94] sm:text-[10px]">
-                          Animation
-                        </span>
-
-                        {mainHead && (
-                          <h2 className="m-0 max-w-[500px] text-3xl font-bold leading-[1.05] tracking-[-0.04em] text-white drop-shadow-md sm:text-4xl lg:text-5xl">
-                            {mainHead}
-                          </h2>
-                        )}
-
-                        {previewDescription && (
-                          <p className="mx-auto mt-2 max-w-[420px] text-xs text-white/90 sm:text-sm">
-                            {previewDescription}
-                          </p>
-                        )}
-
-                      </div>
-                    </div>
-                  )}
-                </>
+                <video
+                  id="animation-preview-video"
+                  src={videoLink}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  onError={() => setVideoError(true)}
+                  className="block h-full w-full object-cover"
+                />
               ) : (
-                /* Video Fallback */
-                <div className="flex h-full flex-col items-center justify-center px-6 text-center">
-
+                <div className="flex h-full w-full flex-col items-center justify-center px-6 text-center">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#d8f7f3] text-[#008f88]">
                     <FiPlay className="ml-0.5 text-lg" />
                   </div>
@@ -243,33 +205,19 @@ const AnimaResusable = ({
                       <FiArrowRight />
                     </Link>
                   )}
-
                 </div>
               )}
             </div>
-
-            {/* Preview Indicators */}
-            <div className="flex items-center justify-center gap-2 py-4">
-              <span className="h-1 w-8 rounded-full bg-[#00a69c]" />
-              <span className="h-1 w-6 rounded-full bg-[#d4e4e6]" />
-              <span className="h-1 w-6 rounded-full bg-[#d4e4e6]" />
-            </div>
           </div>
 
-          {/* Code */}
           <div className="overflow-hidden rounded-2xl border border-[#d9e3e5] bg-white shadow-[0_8px_30px_rgba(15,50,60,0.05)]">
-
-            {/* Code Header */}
             <div className="flex h-[54px] items-center justify-between border-b border-[#e4ebec] px-4 sm:px-5">
-
               <div className="flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#ffe0da] text-[#ef6c5c]">
                   <FiCode className="text-sm" />
                 </div>
 
-                <span className="text-sm font-bold text-[#092f40]">
-                  Code
-                </span>
+                <span className="text-sm font-bold text-[#092f40]">Code</span>
               </div>
 
               {currentCode && (
@@ -291,10 +239,8 @@ const AnimaResusable = ({
                   )}
                 </button>
               )}
-
             </div>
 
-            {/* File Tabs */}
             {files.length > 0 && (
               <div className="flex overflow-x-auto border-b border-[#dce7e9] bg-[#eef7f8] px-3 pt-2 sm:px-4">
                 {files.map((file, index) => {
@@ -322,9 +268,7 @@ const AnimaResusable = ({
               </div>
             )}
 
-            {/* Code Editor */}
             <div className="relative bg-[#082b38]">
-
               {currentCode ? (
                 <div className="h-[320px] overflow-auto sm:h-[380px] lg:h-[430px]">
                   <SyntaxHighlighter
@@ -366,14 +310,11 @@ const AnimaResusable = ({
                   Code unavailable
                 </div>
               )}
-
             </div>
           </div>
         </section>
 
-        {/* Action Buttons */}
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-
           {githubUrl && (
             <a
               href={githubUrl}
@@ -403,9 +344,7 @@ const AnimaResusable = ({
               <FiArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           )}
-
         </div>
-
       </div>
     </main>
   );

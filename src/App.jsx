@@ -56,6 +56,7 @@ const App = () => {
         {/* Website with sidebar */}
         <Route element={<OverallPage />}>
           <Route path="/" element={<MainPage />} />
+           <Route path="/about" element={<About />} />
 
           <Route path="/page-one" element={<Page_Animation_Show />} />
           <Route path="/page-two" element={<PageTwo_show />} />

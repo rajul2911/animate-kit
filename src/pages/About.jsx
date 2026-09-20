@@ -153,13 +153,13 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            initial={{ x: "100vw" }}
-            animate={{ x: 0 }}
-            transition={{
-              type: "tween",
-              duration: 1.5,
-              velocity: 0.6,
-            }}
+            // initial={{ x: "100vw" }}
+            // animate={{ x: 0 }}
+            // transition={{
+            //   type: "tween",
+            //   duration: 1.5,
+            //   velocity: 0.6,
+            // }}
             className="mt-10 flex w-full items-center justify-center lg:mt-0 lg:w-[55%] lg:justify-end"
           >
             <img
@@ -182,7 +182,7 @@ const About = () => {
       </div>
 
       </div> */}
-
+{/* 
         <motion.div
           animate={{ y: [0, 15, 0] }}
           transition={{
@@ -197,18 +197,18 @@ const About = () => {
           </div>
 
           <span className="text-[12px] text-[#666]">Scroll</span>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       <div className="mx-auto mt-10 flex w-[92%] max-w-[1280px] flex-col divide-y divide-neutral-200 lg:w-[90%] lg:flex-row lg:divide-x lg:divide-y-0">
         <motion.div
-          initial={{ x: "-100%", opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{
-            duration: 1.2,
-            ease: "easeOut",
-          }}
+          // initial={{ x: "-100%", opacity: 0 }}
+          // whileInView={{ x: 0, opacity: 1 }}
+          // viewport={{ once: false, amount: 0.2 }}
+          // transition={{
+          //   duration: 1.2,
+          //   ease: "easeOut",
+          // }}
           className="flex w-full flex-col pb-10 lg:w-[55%] lg:pr-10 lg:pb-0"
         >
           <div className="w-fit rounded-xl bg-white px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.25em] text-purple-600 sm:px-4 sm:py-2 sm:text-[10px]">
@@ -247,13 +247,13 @@ const About = () => {
         </motion.div>
 
         <motion.div
-          initial={{ x: "calc(100%)", opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{
-            duration: 1.2,
-            ease: "easeOut",
-          }}
+          // initial={{ x: "calc(100%)", opacity: 0 }}
+          // whileInView={{ x: 0, opacity: 1 }}
+          // viewport={{ once: false, amount: 0.2 }}
+          // transition={{
+          //   duration: 1.2,
+          //   ease: "easeOut",
+          // }}
           className="flex w-full flex-col pb-10 pl-10 lg:w-[55%] lg:pr-10 lg:pb-0"
         >
           <div className="w-fit rounded-xl bg-white px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.25em] text-purple-600 sm:px-4 sm:py-2 sm:text-[10px]">
