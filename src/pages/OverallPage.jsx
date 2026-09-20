@@ -7,7 +7,7 @@ const OverallPage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#fffdfa] md:px-6 lg:px-8 xl:px-12 2xl:px-[120px]">
+    <div className="flex h-screen overflow-hidden bg-background md:px-6 lg:px-8 xl:px-12 2xl:px-[120px]">
 
       {/* Mobile Header */}
       <header className="fixed left-0 right-0 top-0 z-40 flex h-16 items-center border-b border-neutral-200 bg-white px-4 md:hidden">

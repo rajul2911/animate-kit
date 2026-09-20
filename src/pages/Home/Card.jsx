@@ -117,29 +117,26 @@ const Card = () => {
         >
           <Link
             to={item.to}
-            className="group flex h-full w-full flex-col rounded-xl border border-border bg-[#fffdfa] p-4 transition-all duration-200 hover:border-primary/30 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
+            className="group flex h-full w-full flex-col rounded-xl border border-border bg-background p-4 transition-all duration-200 hover:border-primary/30 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
           >
-            {/* Icon */}
             <div
               className={`mb-3 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${item.bgcolor} ${item.iconColor}`}
             >
               <span className="text-[17px]"> {item.icon} </span>
             </div>
-            {/* Title */}
             <h3 className="text-[16px] font-bold leading-5 text-foreground">
               {item.Head}
             </h3>
-            {/* Description */}
-            <p className="mt-1.5 line-clamp-2 max-w-[260px] text-[13px] leading-[1.45] text-muted-foreground">
+            <p className="mt-1.5 line-clamp-2 max-w-[260px] text-[13px] leading-[1.45] text-ink-soft">
               {item.Des}
             </p>
             {/* Bottom */}
-            <div className="mt-auto flex items-center justify-between pt-3">
-              <span className="text-[11px] font-medium text-muted-foreground">
+            <div className="mt-auto flex items-center justify-between">
+              <span className="text-[11px] font-medium text-ink-soft">
                 {item.count}
               </span>
               <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-border bg-white transition-all duration-200 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground">
-                <FiArrowRight className="text-[13px] transition-transform duration-200 group-hover:translate-x-0.5" />
+                <FiArrowRight className="text-[13px] transition-transform duration-200" />
               </div>
             </div>
           </Link>
