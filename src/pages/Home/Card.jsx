@@ -22,7 +22,7 @@ const details = [
     icon: <FiGrid />,
     iconColor: "text-primary",
     bgcolor: "bg-secondary",
-    to: "/page-animation",
+    to: "/page-one",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const details = [
     icon: <FiArrowUp />,
     iconColor: "text-coral",
     bgcolor: "bg-accent",
-    to: "/scroll-animation",
+    to: "/parallax-scroll",
   },
   // {
   //   id: 3,
@@ -52,7 +52,7 @@ const details = [
     icon: <GoStack />,
     iconColor: "text-[#e7439b]",
     bgcolor: "bg-[#fdeaf5]",
-    to: "/menu-animation",
+    to: "/sidebar-curve",
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ const details = [
     icon: <FiMousePointer />,
     iconColor: "text-primary",
     bgcolor: "bg-secondary",
-    to: "/cursor-effects",
+    to: "/mask-cursor",
   },
   // {
   //   id: 5,

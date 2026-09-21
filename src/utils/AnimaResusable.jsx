@@ -158,9 +158,7 @@ const AnimaResusable = ({
                   <FiPlay className="text-sm" />
                 </div>
 
-                <span className="text-sm font-bold text-ink-soft">
-                  Preview
-                </span>
+                <span className="text-sm font-bold text-ink-soft">Preview</span>
               </div>
             </div>
 
@@ -177,6 +175,16 @@ const AnimaResusable = ({
                   onError={() => setVideoError(true)}
                   className="block h-full w-full object-contain"
                 />
+                // <iframe
+                //   width="650"
+                //   height="500"
+                //   src="https://www.youtube.com/embed/JcQCORJ3Xr0?si=MXVGhmLGFZ7CKTB6"
+                //   title="YouTube video player"
+                //   frameborder="0"
+                //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                //   referrerpolicy="strict-origin-when-cross-origin"
+                //   allowfullscreen
+                // ></iframe>
               ) : (
                 <div className="flex h-full w-full flex-col items-center justify-center px-6 text-center">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary">
