@@ -5,15 +5,13 @@ const ScrollFour_Show = () => {
   return <>
 
   <AnimaResusable
-      breadcrumbs="Scroll Animation / One"
-      title="Page Animation One"
-      badge="Page animation"
-      description="A smooth animated navigation menu with expressive transitions."
-      mainHead="Page Animation Onejjsdjkdfsjkasfdkj"
-      previewDescription="Smooth transitions. Better experiences."
+      breadcrumbs="Scroll Animation / Text Gradient"
+      title="Text Gradient"
+      badge="Scroll animation"
+      description="Text transitions through beautiful gradient colors while scrolling."
       videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
       code={Four}
-      githubUrl="https://github.com/rajul2911/"
+      githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/TextGradient"
       viewAnimationRoute="text-gradient-live"
     />
 
