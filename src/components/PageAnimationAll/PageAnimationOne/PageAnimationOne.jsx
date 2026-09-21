@@ -24,24 +24,20 @@ const PageAnimationOne = () => {
         key={location.pathname}
         className="relative min-h-screen overflow-hidden bg-black"
       >
-        {/* SLIDE */}
 
         <motion.div
           className="fixed inset-0 z-10 h-screen w-full bg-white"
           {...anim(slide)}
         />
 
-        {/* PAGE */}
 
         <motion.div
           className="relative min-h-screen bg-white
           "
           {...anim(perspective)}
         >
-          {/* OPACITY */}
 
           <motion.div className="min-h-screen" {...anim(opacity)}>
-            {/* HEADER */}
 
             <header className="flex flex-col p-10">
               <div className="flex gap-4">
@@ -66,7 +62,6 @@ const PageAnimationOne = () => {
               </nav>
             </header>
 
-            {/* CURRENT ROUTE CONTENT */}
 
             <main className="px-10">{outlet}</main>
           </motion.div>

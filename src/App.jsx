@@ -84,7 +84,7 @@ const App = () => {
 
 
         {/* Standalone animation */}
-        <Route path="/page-animation-one" element={<PageAnimationOne />}>
+        <Route path="/page-one-live" element={<PageAnimationOne />}>
           <Route index element={<HomeOne />} />
           <Route path="about-one" element={<AboutOne />} />
           <Route path="contact-one" element={<ContactOne />} />
