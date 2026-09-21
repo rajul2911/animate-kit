@@ -8,11 +8,11 @@ const CardOne_show = () => {
          <AnimaResusable
       breadcrumbs="Scroll Animations / Card Parallax "
       title="Card Parallax"
-      badge="Page animation"
+      badge="Scroll animation"
       description="Cards shift dynamically with the scroll for a depth effect."
       videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
       code={Two}
-      githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/Parallax%20Scroll"
+      githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/CardScrollParallax"
       viewAnimationRoute="card-parallax-live"
     />
 

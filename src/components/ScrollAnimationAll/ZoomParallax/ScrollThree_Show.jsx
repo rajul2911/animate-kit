@@ -6,15 +6,13 @@ const ScrollThree_Show = () => {
     <>
 
       <AnimaResusable
-      breadcrumbs="Page Animations / One"
-      title="Page Animation One"
-      badge="Page animation"
-      description="A smooth animated navigation menu with expressive transitions."
-      mainHead="Page Animation Onejjsdjkdfsjkasfdkj"
-      previewDescription="Smooth transitions. Better experiences."
+      breadcrumbs="Scroll Animation / Zoom Parallax"
+      title="Zoom Parallax"
+      badge="Scroll animation"
+      description="Elements smoothly zoom in or out based on scroll position"
       videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
       code={Three}
-      githubUrl="https://github.com/rajul2911/"
+      githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/ZoomParallax"
       viewAnimationRoute="zoom-parallax-live"
     />
 
