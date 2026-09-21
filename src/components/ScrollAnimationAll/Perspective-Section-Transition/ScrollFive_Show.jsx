@@ -11,7 +11,7 @@ const ScrollFive_Show = () => {
         description="A smooth 3D-style scroll effect that adds depth and perspective to page elements"
         videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
           code={Five}
-        githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/TextGradient"
+        githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/Perspective-Section-Transition"
         viewAnimationRoute="perspective-scroll-live"
       />
     </div>
