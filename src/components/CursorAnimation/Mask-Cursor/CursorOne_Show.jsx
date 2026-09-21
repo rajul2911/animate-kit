@@ -6,15 +6,13 @@ const CursorOne_Show = () => {
     <>
 
       <AnimaResusable
-      breadcrumbs="Cursor Animations / One"
-      title="Page Animation One"
-      badge="Page animation"
-      description="A smooth animated navigation menu with expressive transitions."
-      mainHead="Page Animation Onejjsdjkdfsjkasfdkj"
-      previewDescription="Smooth transitions. Better experiences."
+      breadcrumbs="Cursor Animations / Mask Cursor"
+      title="Mask Cursor"
+      badge="Cursor Effect"
+      description="A custom cursor effect that reveals content through a smooth animated mask."
       videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
       code={One}
-      githubUrl="https://github.com/rajul2911/"
+      githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/CursorAnimation/Mask-Cursor"
       viewAnimationRoute="mask-cursor-live"
     />
 
