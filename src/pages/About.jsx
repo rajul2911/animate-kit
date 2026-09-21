@@ -93,14 +93,14 @@ const About = () => {
       <div className="max-w-[1400px] mx-auto px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:py-[8%]">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-8">
           <motion.div
-            initial={{ x: -3000 }}
-            animate={{ x: 0 }}
-            transition={{
-              type: "tween",
-              duration: 1.5,
-              // delay: 0.5,
-              velocity: 0.6,
-            }}
+            // initial={{ x: -3000 }}
+            // animate={{ x: 0 }}
+            // transition={{
+            //   type: "tween",
+            //   duration: 1.5,
+            //   // delay: 0.5,
+            //   velocity: 0.6,
+            // }}
             className="flex w-full flex-col px-0 sm:px-2 lg:w-[80%] lg:px-3"
           >
             <div className="w-fit rounded-xl border border-purple-200 bg-white px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-purple-600 sm:px-4 sm:py-2 sm:text-xs lg:text-sm">

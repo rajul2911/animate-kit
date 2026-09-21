@@ -10,9 +10,11 @@ import {
   FiArrowUpRight,
   FiChevronDown,
   FiChevronUp,
+  FiArrowRight,
 } from "react-icons/fi";
 import logo from "../../assests/motionlab.png";
 import { motion, LayoutGroup } from "motion/react";
+import { FaGithub } from "react-icons/fa6";
 
 const animationDetails = [
   {
@@ -248,6 +250,25 @@ const SideBar = ({ onNavigate }) => {
             })}
           </div>
         </LayoutGroup>
+      <a
+        href="https://github.com/rajul2911/animate-kit"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex w-full items-center gap-3 rounded-xl bg-muted px-4 py-3 transition-all duration-300 hover:shadow-sm hover:bg-coral hover:text-white"
+      >
+        <FaGithub className="h-7 w-7 shrink-0 text-foreground group-hover:text-white" />
+        
+        <div className="flex-1">
+          <p className="text-[13px] font-semibold leading-tight text-foreground group-hover:text-white">
+            Star on GitHub
+          </p>
+          <p className="mt-1 text-[10px] leading-tight text-muted-foreground group-hover:text-white">
+            If you find this helpful!
+          </p>
+        </div>
+        
+        <FiArrowRight className="h-5 w-5 text-foreground group-hover:text-white" />
+      </a>
       </div>
     </aside>
   );
