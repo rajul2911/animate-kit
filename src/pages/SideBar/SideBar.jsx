@@ -37,6 +37,7 @@ const animationDetails = [
       { id: 22, text: "Card Parallax", route: "/card-parallax" },
       { id: 23, text: "Zoom Parallax", route: "/zoom-parallax" },
       { id: 24, text: "Text Gradient", route: "/text-gradient" },
+      { id: 25, text: "Perspective Scroll", route: "/perspective-scroll" },
     ],
   },
 
