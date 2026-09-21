@@ -1,33 +1,30 @@
-import React from 'react'
-import AnimaResusable from '../../../utils/AnimaResusable'
+import React from "react";
+import AnimaResusable from "../../../utils/AnimaResusable";
 
 const PageTwo_show = () => {
   return (
     <>
-        <AnimaResusable
-      breadcrumbs="Page Animations / Two"
-      title="Page Animation Two"
-      badge="Page animation"
-      description="A smooth animated navigation menu with expressive transitions."
-      mainHead="Page Animation One"
-      previewDescription="Smooth transitions. Better experiences."
-      videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
-      code={Two}
-      githubUrl="https://github.com/rajul2911/"
-      viewAnimationRoute="page-animation-two"
-    />
+      <AnimaResusable
+        breadcrumbs="Page Animations / Two"
+        title="Page Animation Two"
+        badge="Page animation"
+        description="Smooth page transitions for a fluid and modern navigation experience."
+        videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+        code={Two}
+        githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/PageAnimationAll/PageAnimationTwo"
+        viewAnimationRoute="page-two-live"
+      />
     </>
-  )
-}
+  );
+};
 
-export default PageTwo_show
-
+export default PageTwo_show;
 
 const Two = [
-    {
+  {
     id: "pagination-two",
     name: "Pagination Two",
-    route: "page-animation-two",
+    // route: "page-animation-two",
     files: [
       {
         name: "PageAnimationTwo.jsx",
@@ -115,4 +112,4 @@ export default PageAnimationTwo;`,
       },
     ],
   },
-]
+];

@@ -42,7 +42,6 @@ const PageAnimationTwo = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* PAGE CONTENT */}
 
       <header className="flex flex-col p-10">
         <div className="flex gap-4">
@@ -79,14 +78,12 @@ const PageAnimationTwo = () => {
 
       <main className="px-10">{outlet}</main>
 
-      {/* PAGE TRANSITION */}
 
       <AnimatePresence mode="wait">
         <motion.div
           key={location.pathname}
           className="fixed inset-0 z-[50] pointer-events-none"
         >
-          {/* STAIRCASE COLUMN */}
 
           <div className="fixed left-0 top-0 flex h-screen w-screen pointer-events-none">
             {[...Array(nbOfColumns)].map((_, i) => (
