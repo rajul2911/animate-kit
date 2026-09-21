@@ -5,15 +5,13 @@ const MenuOne_Show = () => {
   return (
     <>
       <AnimaResusable
-      breadcrumbs="Page Animations / One"
-      title="Page Animation One"
-      badge="Page animation"
-      description="A smooth animated navigation menu with expressive transitions."
-      mainHead="Page Animation Onejjsdjkdfsjkasfdkj"
-      previewDescription="Smooth transitions. Better experiences."
+      breadcrumbs="Menu Animations / SideBar Curve"
+      title="SideBar Curve"
+      badge="Menu animation"
+      description="Smooth curved animations for a more dynamic sidebar experience"
       videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
       code={One}
-      githubUrl="https://github.com/rajul2911/"
+      githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/MenuAnimation/MenuOne"
       viewAnimationRoute="sidebar-curve-live"
     />
 
