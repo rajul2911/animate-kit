@@ -71,7 +71,6 @@ const ScrollOne = () => {
     };
   }, []);
 
-  // Lenis smooth scrolling
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: false,

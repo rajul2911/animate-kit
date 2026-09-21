@@ -6,15 +6,13 @@ const CardOne_show = () => {
     <>
 
          <AnimaResusable
-      breadcrumbs="Scroll Animations / Card Parallax"
+      breadcrumbs="Scroll Animations / Card Parallax "
       title="Card Parallax"
       badge="Page animation"
-      description="A smooth animated navigation menu with expressive transitions."
-      mainHead="Page Animation Onejjsdjkdfsjkasfdkj"
-      previewDescription="Smooth transitions. Better experiences."
+      description="Layered elements move at different speeds as you scroll"
       videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
       code={One}
-      githubUrl="https://github.com/rajul2911/"
+      githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/Parallax%20Scroll"
       viewAnimationRoute="card-parallax-live"
     />
 

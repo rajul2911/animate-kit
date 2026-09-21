@@ -61,8 +61,8 @@ const App = () => {
           <Route path="/page-one" element={<Page_Animation_Show />} />
           <Route path="/page-two" element={<PageTwo_show />} />
           <Route path="/page-three" element={<PageThree_Show />} />
-          <Route path="/card-parallax" element={<CardOne_show />} />
           <Route path="/parallax-scroll" element={<ScrollTwo_show />} />
+          <Route path="/card-parallax" element={<CardOne_show />} />
           <Route path="/zoom-parallax" element={<ScrollThree_Show />} />
           <Route path="/text-gradient" element={<ScrollFour_Show />} />
           <Route path="/sidebar-curve" element={<MenuOne_Show />} />
@@ -106,8 +106,8 @@ const App = () => {
           <Route path="contact-two" element={<ContactOne />} />
         </Route>
 
-        <Route path="card-parallax-live" element={<ScrollCard />}/>
         <Route path="parallax-scroll-live" element={<ScrollOne />}/>
+        <Route path="card-parallax-live" element={<ScrollCard />}/>
         <Route path="zoom-parallax-live" element={<ZoomParallax />}/>
         <Route path="text-gradient-live" element={<TextGradient />}/>
         <Route path="sidebar-curve-live" element={<MenuOne />}/>
