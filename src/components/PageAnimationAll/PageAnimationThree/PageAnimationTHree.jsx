@@ -51,7 +51,6 @@ const PageAnimationTHree = () => {
         backgroundColor: "white",
       }}
     >
-      {/* Black background */}
       <div
         className="fixed left-0 top-0 h-[calc(100vh+600px)] w-screen pointer-events-none"
         style={{
@@ -61,7 +60,6 @@ const PageAnimationTHree = () => {
         }}
       />
 
-      {/* Route name */}
       <motion.p
         key={location.pathname}
         className="absolute left-1/2 top-[40%] z-[3] -translate-x-1/2 text-center text-[46px] text-white"
@@ -71,12 +69,10 @@ const PageAnimationTHree = () => {
         {routes[location.pathname] || ""}
       </motion.p>
 
-      {/* SVG Curve */}
       {dimensions.width !== null && (
         <SVG width={dimensions.width} height={dimensions.height} />
       )}
 
-      {/* Navigation */}
       <header className="relative z-[1000] flex flex-col p-10">
         <div className="flex gap-4">
           <div className="mb-5 sm:mb-6">
@@ -110,7 +106,6 @@ const PageAnimationTHree = () => {
         </nav>
       </header>
 
-      {/* Page content */}
       <main className="relative z-0">
         <AnimatePresence mode="wait">
           <motion.div

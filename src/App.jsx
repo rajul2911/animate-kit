@@ -98,7 +98,7 @@ const App = () => {
           <Route path="contact-two" element={<ContactOne />} />
         </Route>
 
-        <Route path="page-animation-three" element={<PageAnimationTHree />}>
+        <Route path="page-three-live" element={<PageAnimationTHree />}>
           <Route index element={<HomeOne />} />
 
           <Route path="about-two" element={<AboutOne />} />

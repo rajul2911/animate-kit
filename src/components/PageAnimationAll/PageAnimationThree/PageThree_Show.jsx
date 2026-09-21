@@ -8,13 +8,11 @@ const PageThree_Show = () => {
         breadcrumbs="Page Animations / Three"
         title="Page Animation Three"
         badge="Page animation"
-        description="A smooth animated navigation menu with expressive transitions."
-        mainHead="Page Animation One"
-        previewDescription="Smooth transitions. Better experiences."
+        description="Smooth page transitions for a fluid and modern navigation experience."
         videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
         code={Three}
         githubUrl="https://github.com/rajul2911/"
-        viewAnimationRoute="page-animation-three"
+        viewAnimationRoute="page-three-live"
       />
     </>
   );
@@ -34,6 +32,7 @@ const Three = [
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, useLocation, useOutlet } from "react-router-dom";
 import { text, curve, translate } from "./AnimationThree";
+import { MdOutlineArrowBackIos } from "react-icons/md";
 
 const routes = {
   "/page-animation/page-animation-three": "Home",
@@ -101,7 +100,6 @@ const PageAnimationThree = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-white">
-      {/* Background fallback */}
       <div
         className="fixed left-0 top-0 h-[calc(100vh+600px)] w-screen pointer-events-none"
         style={{
@@ -113,7 +111,6 @@ const PageAnimationThree = () => {
 
       <AnimatePresence mode="wait">
         <div key={location.pathname}>
-          {/* Animated Route Title */}
           <motion.p
             className="absolute left-1/2 top-[40%] z-[3] -translate-x-1/2 text-center text-[46px] font-bold text-white pointer-events-none"
             {...anim(text)}
@@ -121,12 +118,10 @@ const PageAnimationThree = () => {
             {routes[location.pathname] || ""}
           </motion.p>
 
-          {/* Transition Curve */}
           {dimensions.width !== null && (
             <SVG width={dimensions.width} height={dimensions.height} />
           )}
 
-          {/* Header */}
           <header className="relative z-[1000] flex flex-col p-10">
             <span className="text-[24px] font-black uppercase">
               Page Animation Three
@@ -145,7 +140,6 @@ const PageAnimationThree = () => {
             </nav>
           </header>
 
-          {/* Page Content */}
           <main className="relative z-0 px-10">{outlet}</main>
         </div>
       </AnimatePresence>
