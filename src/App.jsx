@@ -79,7 +79,7 @@ const App = () => {
 
           {/* MENU ANIMATION */}
           <Route path="/sidebar-curve" element={<MenuOne_Show />} />
-          <Route path="/sidebar-meu" element={<MenuTwo_Show />} />
+          <Route path="/sidebar-menu" element={<MenuTwo_Show />} />
 
 
           {/* CURSOR EFFECT */}
