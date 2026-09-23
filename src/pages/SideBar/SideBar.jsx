@@ -52,7 +52,10 @@ const animationDetails = [
     id: 4,
     name: "Cursor animations",
     icon: <FiMousePointer />,
-    subhead: [{ id: 42, text: "Mask cursor", route: "/mask-cursor" }],
+    subhead: [
+      { id: 41, text: "Mask cursor", route: "/mask-cursor" },
+      { id: 42, text: "Sticky cursor", route: "/sticky-cursor" }
+    ],
   },
 
   // {

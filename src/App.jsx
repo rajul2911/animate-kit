@@ -38,6 +38,8 @@ import CursorOne_Show from "./components/CursorAnimation/Mask-Cursor/CursorOne_S
 import CursorOne from "./components/CursorAnimation/Mask-Cursor/CursorOne";
 import ScrollFive_Show from "./components/ScrollAnimationAll/Perspective-Section-Transition/ScrollFive_Show";
 import PerspectiveScroll from "./components/ScrollAnimationAll/Perspective-Section-Transition/PerspectiveScroll";
+import CursorTwo_Show from "./components/CursorAnimation/Sticky-Cursor/CursorTwo_Show";
+import StickyCursor from "./components/CursorAnimation/Sticky-Cursor/StickyCursor";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -79,6 +81,7 @@ const App = () => {
 
           {/* CURSOR EFFECT */}
           <Route path="/mask-cursor" element={<CursorOne_Show />} />
+          <Route path="/sticky-cursor" element={<CursorTwo_Show />} />
 
 
 
@@ -135,7 +138,7 @@ const App = () => {
 
                   {/* CURSOR EFFECT */}
 
-        <Route path="mask-cursor-live" element={<CursorOne />}/>
+        <Route path="sticky-cursor-live" element={<StickyCursor />}/>
 
 
       </Routes>
