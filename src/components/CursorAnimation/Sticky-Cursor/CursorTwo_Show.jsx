@@ -11,7 +11,7 @@ const CursorTwo_Show = () => {
         description="A smooth magnetic cursor effect that sticks to interactive elements for a playful, responsive experience."
         videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
         code={Two}
-        //   githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/CursorAnimation/Mask-Cursor"
+        githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/CursorAnimation/Sticky-Cursor"
         viewAnimationRoute="sticky-cursor-live"
       />
     </div>
