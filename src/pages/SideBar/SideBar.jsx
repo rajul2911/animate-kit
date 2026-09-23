@@ -46,7 +46,7 @@ const animationDetails = [
     name: "Menu Animations",
     icon: <FiType />,
     subhead: [{ id: 31, text: "SideBar Curve", route: "/sidebar-curve" },
-     { id: 32, text: "SideBar Menu", route: "/sidebar-menu" },
+    //  { id: 32, text: "SideBar Menu", route: "/sidebar-menu" },
     ]
   },
 
