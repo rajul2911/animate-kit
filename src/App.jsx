@@ -40,6 +40,8 @@ import ScrollFive_Show from "./components/ScrollAnimationAll/Perspective-Section
 import PerspectiveScroll from "./components/ScrollAnimationAll/Perspective-Section-Transition/PerspectiveScroll";
 import CursorTwo_Show from "./components/CursorAnimation/Sticky-Cursor/CursorTwo_Show";
 import StickyCursor from "./components/CursorAnimation/Sticky-Cursor/StickyCursor";
+import MenuTwo_Show from "./components/MenuAnimation/MenuTwo/MenuTwo_Show";
+import SideBarMenu from "./components/MenuAnimation/MenuTwo/SideBarMenu";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -77,6 +79,7 @@ const App = () => {
 
           {/* MENU ANIMATION */}
           <Route path="/sidebar-curve" element={<MenuOne_Show />} />
+          <Route path="/sidebar-meu" element={<MenuTwo_Show />} />
 
 
           {/* CURSOR EFFECT */}
@@ -135,9 +138,11 @@ const App = () => {
                   {/* MENU ANIMATION */}
 
         <Route path="sidebar-curve-live" element={<MenuOne />}/>
+        <Route path="sidebar-menu-live" element={<SideBarMenu />}/>
 
                   {/* CURSOR EFFECT */}
 
+        <Route path="mask-cursor-live" element={<CursorOne />}/>
         <Route path="sticky-cursor-live" element={<StickyCursor />}/>
 
 
