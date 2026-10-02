@@ -59,23 +59,15 @@ const PageAnimationTHree = () => {
           transition: "opacity 0s linear 0.1s",
         }}
       />
-      {/* <motion.p
+
+      <motion.p
         key={location.pathname}
         className="absolute left-1/2 top-[40%] z-[3] -translate-x-1/2 text-center text-[46px] text-white"
         {...anim(text)}
         fill="black"
       >
         {routes[location.pathname] || ""}
-      </motion.p> */}
-      <AnimatePresence mode="wait">
-        <motion.p
-          key={location.pathname}
-          className="absolute left-1/2 top-[40%] z-[3] -translate-x-1/2 text-center text-[46px] text-white"
-          {...anim(text)}
-        >
-          {routes[location.pathname] || ""}
-        </motion.p>
-      </AnimatePresence>
+      </motion.p>
 
       {dimensions.width !== null && (
         <SVG width={dimensions.width} height={dimensions.height} />
@@ -83,6 +75,7 @@ const PageAnimationTHree = () => {
 
       <header className="relative z-[1000] flex flex-col p-10">
         <div className="flex gap-4">
+
           <span className="text-[24px] font-black uppercase">
             Page Animation Three
           </span>
