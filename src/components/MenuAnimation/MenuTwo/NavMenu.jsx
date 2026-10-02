@@ -29,7 +29,7 @@ export const perspective = {
     opacity: 0,
     rotateX: 90,
     translateY: 80,
-    translateX: -20,
+    translateX: 20,
   },
   enter: (i) => ({
     
@@ -58,8 +58,8 @@ const NavMenu = () => {
           <div
             key={`b_${index}`}
             style={{
-              perspective: "120px",
-              perspectiveOrigin: "bottom",
+              // perspective: "120px",
+              // perspectiveOrigin: "bottom",
             }}
           >
             <motion.div

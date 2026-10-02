@@ -31,7 +31,7 @@ const SideBarMenu = () => {
 
     const [isActive , setIsActive] = useState(false)
   return (
-    <div className='fixed right-[50px] top-[50px] perspective-origin-top'>
+    <div className='fixed right-[50px] top-[50px] '>
 
         <motion.div variants={variants} animate={isActive ?"open" : "close"} initial="close" className='relative w-[480px] h-[650px] bg-[#c9fd74] rounded-[25px]'>
           <AnimatePresence>
