@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -42,6 +42,8 @@ const AnimaResusable = ({
   const [activeFile, setActiveFile] = useState(0);
   const [copied, setCopied] = useState(false);
   const [videoError, setVideoError] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const videoContainerRef = useRef(null);
 
   /*
     Data structure:
@@ -83,9 +85,32 @@ const AnimaResusable = ({
   */
 
   useEffect(() => {
+    const element = videoContainerRef.current;
+
+    if (!element || !hasVideoUrl) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadVideo(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "0px",
+      },
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [hasVideoUrl, videoLink]);
+
+  useEffect(() => {
     setActiveFile(0);
     setCopied(false);
     setVideoError(false);
+    setShouldLoadVideo(false);
   }, [code, videoLink]);
 
   const handleFileChange = (index) => {
@@ -164,27 +189,20 @@ const AnimaResusable = ({
 
             <div className="relative w-full h-full overflow-hidden bg-[#edf5f4]">
               {showVideo ? (
-                <video
-                  id="animation-preview-video"
-                  src={videoLink}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  onError={() => setVideoError(true)}
-                  className="block h-full w-full object-contain"
-                />
-                // <iframe
-                //   width="650"
-                //   height="500"
-                //   src="https://www.youtube.com/embed/JcQCORJ3Xr0?si=MXVGhmLGFZ7CKTB6"
-                //   title="YouTube video player"
-                //   frameborder="0"
-                //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                //   referrerpolicy="strict-origin-when-cross-origin"
-                //   allowfullscreen
-                // ></iframe>
+                <div ref={videoContainerRef} className="relative h-full w-full">
+                  <video
+                    id="animation-preview-video"
+                    src={shouldLoadVideo ? videoLink : undefined}
+                    autoPlay={shouldLoadVideo}
+                    muted
+                    loop
+                    playsInline
+                    preload="none"
+                    loading="lazy"
+                    onError={() => setVideoError(true)}
+                    className="block h-full w-full object-contain"
+                  />
+                </div>
               ) : (
                 <div className="flex h-full w-full flex-col items-center justify-center px-6 text-center">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary">
