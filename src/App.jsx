@@ -122,9 +122,9 @@ const App = () => {
         <Route path="page-three-live" element={<PageAnimationTHree />}>
           <Route index element={<HomeOne />} />
 
-          <Route path="about-two" element={<AboutOne />} />
+          <Route path="about-three" element={<AboutOne />} />
 
-          <Route path="contact-two" element={<ContactOne />} />
+          <Route path="contact-three" element={<ContactOne />} />
         </Route>
 
                       {/* SCROLL ANIMATION */}
