@@ -9,7 +9,7 @@ const Page_Animation_Show = () => {
         title="Page Animation One"
         badge="Page animation"
         description="Smooth page transitions for a fluid and modern navigation experience."
-        videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+        // videoLink="https://videos.animate-kit.store/Page_Animation/Video%20Pr.mp4"
         code={One}
         githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/PageAnimationAll/PageAnimationOne"
         viewAnimationRoute="page-one-live"

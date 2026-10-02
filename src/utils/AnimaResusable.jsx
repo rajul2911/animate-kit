@@ -10,6 +10,9 @@ import {
   FiExternalLink,
   FiGithub,
   FiPlay,
+  FiMaximize2,
+  FiMinimize2,
+  FiX,
 } from "react-icons/fi";
 
 const getLanguage = (fileName = "") => {
@@ -43,6 +46,7 @@ const AnimaResusable = ({
   const [copied, setCopied] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const [isVideoFullscreen, setIsVideoFullscreen] = useState(false);
   const videoContainerRef = useRef(null);
 
   /*
@@ -133,6 +137,28 @@ const AnimaResusable = ({
       console.error("Failed to copy code:", error);
     }
   };
+  const handleVideoFullscreen = () => {
+    setIsVideoFullscreen(true);
+  };
+
+  const closeVideoFullscreen = () => {
+    setIsVideoFullscreen(false);
+  };
+  useEffect(() => {
+    if (!isVideoFullscreen) return;
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        setIsVideoFullscreen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [isVideoFullscreen]);
 
   return (
     <main className="min-h-screen w-full bg-[#fffdfa] pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-10 lg:pt-12">
@@ -185,6 +211,27 @@ const AnimaResusable = ({
 
                 <span className="text-sm font-bold text-ink-soft">Preview</span>
               </div>
+              {showVideo && (
+                <button
+                  type="button"
+                  onClick={handleVideoFullscreen}
+                  aria-label={
+                    isVideoFullscreen
+                      ? "Exit fullscreen"
+                      : "View video fullscreen"
+                  }
+                  title={
+                    isVideoFullscreen ? "Exit fullscreen" : "View fullscreen"
+                  }
+                  className="pointer-events-auto flex h-9 w-9 cursor-pointer items-center justify-center rounded-xl border border-white/60 bg-white/85 text-ink-soft shadow-sm backdrop-blur-md transition-all duration-200 hover:scale-105 hover:bg-white active:scale-95 sm:h-10 sm:w-10"
+                >
+                  {isVideoFullscreen ? (
+                    <FiMinimize2 className="text-sm sm:text-base" />
+                  ) : (
+                    <FiMaximize2 className="text-sm sm:text-base" />
+                  )}
+                </button>
+              )}
             </div>
 
             <div className="relative w-full h-full overflow-hidden bg-[#edf5f4]">
@@ -192,6 +239,7 @@ const AnimaResusable = ({
                 <div ref={videoContainerRef} className="relative h-full w-full">
                   <video
                     id="animation-preview-video"
+                    onClick={handleVideoFullscreen}
                     src={shouldLoadVideo ? videoLink : undefined}
                     autoPlay={shouldLoadVideo}
                     muted
@@ -305,10 +353,10 @@ const AnimaResusable = ({
                       margin: 0,
                       minWidth: "max-content",
                       minHeight: "100%",
-                      padding: "20px 0",
+                      padding: "24px 0",
                       background: "#082b38",
-                      fontSize: "11px",
-                      lineHeight: "1.7",
+                      fontSize: "12px",
+                      lineHeight: "1.8",
                     }}
                     codeTagProps={{
                       style: {
@@ -318,13 +366,13 @@ const AnimaResusable = ({
                     }}
                     lineNumberStyle={{
                       color: "#63818a",
-                      minWidth: "42px",
-                      paddingRight: "12px",
-                      paddingLeft: "10px",
+                      minWidth: "46px",
+                      paddingRight: "14px",
+                      paddingLeft: "12px",
                       textAlign: "right",
                       userSelect: "none",
                       borderRight: "1px solid #173f4c",
-                      marginRight: "12px",
+                      marginRight: "16px",
                     }}
                   >
                     {currentCode}
@@ -371,6 +419,40 @@ const AnimaResusable = ({
           )}
         </div>
       </div>
+
+      {isVideoFullscreen && showVideo && (
+        <div
+          className="fixed inset-0 z-[110] flex items-center justify-center  p-4  sm:p-6"
+          onClick={closeVideoFullscreen}
+        >
+          {/* Video wrapper */}
+          <div
+            className="relative h-[70vh] w-[90vw] max-w-[1400px] overflow-hidden rounded-2xl bg-black shadow-2xl sm:h-[75vh] sm:w-[85vw] lg:h-[70vh] lg:w-[80vw]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              type="button"
+              onClick={closeVideoFullscreen}
+              aria-label="Close preview"
+              title="Close"
+              className="absolute right-3 top-3 z-20 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-black/50 text-white backdrop-blur-md transition-all duration-200 hover:bg-black/80 active:scale-95 sm:right-4 sm:top-4 sm:h-10 sm:w-10"
+            >
+              <FiX className="text-base sm:text-lg" />
+            </button>
+
+            {/* Video */}
+            <video
+              src={videoLink}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-contain"
+            />
+          </div>
+        </div>
+      )}
     </main>
   );
 };
