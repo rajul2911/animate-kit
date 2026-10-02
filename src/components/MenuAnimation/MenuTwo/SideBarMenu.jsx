@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from './Button'
-import { motion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
+import NavMenu from './NavMenu'
 
 const SideBarMenu = () => {
 
@@ -21,6 +22,7 @@ const SideBarMenu = () => {
             top: "0px",
             right:"0px",
             transition:{
+              delay:0.35,
           duration: 0.75,
           ease: [0.76, 0, 0.24, 1],
         } 
@@ -29,9 +31,12 @@ const SideBarMenu = () => {
 
     const [isActive , setIsActive] = useState(false)
   return (
-    <div className='fixed right-[50px] top-[50px]'>
+    <div className='fixed right-[50px] top-[50px] '>
 
         <motion.div variants={variants} animate={isActive ?"open" : "close"} initial="close" className='relative w-[480px] h-[650px] bg-[#c9fd74] rounded-[25px]'>
+          <AnimatePresence>
+          {isActive && <NavMenu/>}
+          </AnimatePresence>
 
         </motion.div>
 
