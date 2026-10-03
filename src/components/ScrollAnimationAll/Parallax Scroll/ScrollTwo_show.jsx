@@ -9,7 +9,7 @@ const ScrollTwo_show = () => {
         title="Scroll Parallax"
         badge="Scroll animation"
         description="Layered elements move at different speeds as you scroll"
-        videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+        videoLink="https://videos.animate-kit.store/Scoll/Scroll_One.mp4"
         code={One}
         githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/Parallax%20Scroll"
         viewAnimationRoute="parallax-scroll-live"

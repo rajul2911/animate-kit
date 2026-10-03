@@ -10,7 +10,7 @@ const CursorOne_Show = () => {
       title="Mask Cursor"
       badge="Cursor Effect"
       description="A custom cursor effect that reveals content through a smooth animated mask."
-      videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+      videoLink="https://videos.animate-kit.store/Cursor/Cursor_One.mp4"
       code={One}
       githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/CursorAnimation/Mask-Cursor"
       viewAnimationRoute="mask-cursor-live"

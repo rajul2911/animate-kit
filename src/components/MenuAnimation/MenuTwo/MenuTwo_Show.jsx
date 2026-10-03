@@ -9,7 +9,7 @@ const MenuTwo_Show = () => {
         title="SideBar Menu"
         badge="Menu animation"
         description="A smooth animated sidebar navigation that expands and transitions between menu items"
-        videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+        videoLink="https://videos.animate-kit.store/Menu/Menu_Two.mp4"
           code={Two}
           githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/MenuAnimation/MenuTwo"
         viewAnimationRoute="sidebar-menu-live"

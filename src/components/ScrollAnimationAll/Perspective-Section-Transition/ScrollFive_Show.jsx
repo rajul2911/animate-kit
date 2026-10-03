@@ -9,7 +9,7 @@ const ScrollFive_Show = () => {
         title="Perspective Scroll Transition"
         badge="Scroll animation"
         description="A smooth 3D-style scroll effect that adds depth and perspective to page elements"
-        videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+        videoLink="https://videos.animate-kit.store/Scoll/Scroll_Five.mp4"
           code={Five}
         githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/Perspective-Section-Transition"
         viewAnimationRoute="perspective-scroll-live"

@@ -9,7 +9,7 @@ const PageThree_Show = () => {
         title="Page Animation Three"
         badge="Page animation"
         description="Smooth page transitions for a fluid and modern navigation experience."
-        videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+        videoLink="https://videos.animate-kit.store/Page_ANimation/Page_Three.mp4"
         code={Three}
         githubUrl="https://github.com/rajul2911/"
         viewAnimationRoute="page-three-live"

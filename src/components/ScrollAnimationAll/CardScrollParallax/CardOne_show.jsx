@@ -10,7 +10,7 @@ const CardOne_show = () => {
       title="Card Parallax"
       badge="Scroll animation"
       description="Cards shift dynamically with the scroll for a depth effect."
-      videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+      videoLink="https://videos.animate-kit.store/Scoll/Scroll_Two.mp4"
       code={Two}
       githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/CardScrollParallax"
       viewAnimationRoute="card-parallax-live"

@@ -9,7 +9,7 @@ const Page_Animation_Show = () => {
         title="Page Animation One"
         badge="Page animation"
         description="Smooth page transitions for a fluid and modern navigation experience."
-        // videoLink="https://videos.animate-kit.store/Page_Animation/trimscroll.mp4"
+        videoLink="https://videos.animate-kit.store/Page_ANimation/Page_One.mp4"
         code={One}
         githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/PageAnimationAll/PageAnimationOne"
         viewAnimationRoute="page-one-live"

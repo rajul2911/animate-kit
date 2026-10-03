@@ -10,7 +10,7 @@ const ScrollThree_Show = () => {
       title="Zoom Parallax"
       badge="Scroll animation"
       description="Elements smoothly zoom in or out based on scroll position"
-      videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+      videoLink="https://videos.animate-kit.store/Scoll/Scroll_Three.mp4"
       code={Three}
       githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/ZoomParallax"
       viewAnimationRoute="zoom-parallax-live"

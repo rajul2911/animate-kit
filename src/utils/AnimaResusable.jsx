@@ -203,7 +203,7 @@ const AnimaResusable = ({
 
         <section className="grid grid-cols-1 gap-5 xl:grid-cols-2">
           <div className="h-full self-start overflow-hidden rounded-2xl border border-[#d9e3e5] bg-white shadow-[0_8px_30px_rgba(15,50,60,0.05)]">
-            <div className="flex h-[54px] items-center border-b border-[#e4ebec] px-4 sm:px-5">
+            <div className="flex h-[54px] items-center justify-between border-b border-[#e4ebec] px-4 sm:px-5">
               <div className="flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary text-primary">
                   <FiPlay className="text-sm" />
@@ -422,7 +422,7 @@ const AnimaResusable = ({
 
       {isVideoFullscreen && showVideo && (
         <div
-          className="fixed inset-0 z-[110] flex items-center justify-center  p-4  sm:p-6"
+          className="fixed inset-0 z-[110] flex items-center justify-center backdrop-blur-[3px]  p-4  sm:p-6"
           onClick={closeVideoFullscreen}
         >
           {/* Video wrapper */}

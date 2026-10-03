@@ -9,7 +9,7 @@ const ScrollFour_Show = () => {
       title="Text Gradient"
       badge="Scroll animation"
       description="Text transitions through beautiful gradient colors while scrolling."
-      videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+      videoLink="https://videos.animate-kit.store/Scoll/Scroll_Four.mp4"
       code={Four}
       githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/ScrollAnimationAll/TextGradient"
       viewAnimationRoute="text-gradient-live"

@@ -9,7 +9,7 @@ const CursorTwo_Show = () => {
         title="Sticky Cursor"
         badge="Cursor Effect"
         description="A smooth magnetic cursor effect that sticks to interactive elements for a playful, responsive experience."
-        videoLink="YOUR_CLOUDFLARE_R2_VIDEO_URL"
+        videoLink="https://videos.animate-kit.store/Cursor/Cursor_Two.mp4"
         code={Two}
         githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/CursorAnimation/Sticky-Cursor"
         viewAnimationRoute="sticky-cursor-live"
