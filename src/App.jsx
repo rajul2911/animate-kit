@@ -1,16 +1,11 @@
 import React, { useEffect } from "react";
 import { Route, Routes, Outlet, useLocation } from "react-router-dom";
 
-import Layout from "./pages/Layout";
 
 import { Analytics } from "@vercel/analytics/react";
 
-import PageAnimationRoutes from "./RouteConfig/PageAnimationRoutes";
-import ScrollAnimationRoute from "./RouteConfig/ScrollAnimationRoute";
-import CursorAnimationRoutes from "./RouteConfig/CursorAnimationRoutes";
-import MenuAnimationRoutes from "./RouteConfig/MenuAnimationRoutes";
+
 import About from "./pages/About";
-import SideBar from "./pages/SideBar/SideBar";
 import OverallPage from "./pages/OverallPage";
 import MainPage from "./pages/Home/MainPage";
 import Page_Animation_Show from "./components/PageAnimationAll/PageAnimationOne/Page_Animation_Show";
@@ -86,17 +81,6 @@ const App = () => {
           <Route path="/mask-cursor" element={<CursorOne_Show />} />
           <Route path="/sticky-cursor" element={<CursorTwo_Show />} />
 
-
-
-          {/* 
-          <Route
-            path="/scroll-animation/*"
-            element={<ScrollAnimationRoute />}
-          />
-
-          <Route path="/cursor-effects/*" element={<CursorAnimationRoutes />} />
-
-          <Route path="/menu-animation/*" element={<MenuAnimationRoutes />} /> */}
         </Route>
 
 
@@ -155,20 +139,3 @@ const App = () => {
 
 export default App;
 
-{
-  /* <Route element={<Layout />}>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/about" element={<About />} />
-          
-
-       
-
-        <Route path="/page-animation/*" element={<PageAnimationRoutes />} />
-
-        <Route path="/scroll-animation/*" element={<ScrollAnimationRoute />} />
-
-        <Route path="/cursor-effects/*" element={<CursorAnimationRoutes />} />
-
-        <Route path="/menu-animation/*" element={<MenuAnimationRoutes />} />
-         </Route> */
-}
