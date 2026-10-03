@@ -35,14 +35,14 @@ const About = () => {
       icon: <HiOutlineLightningBolt />,
       title: "Built with Passion",
       des: "For the developer community",
-      iconcolor: "text-orange-500",
+      iconcolor: "text-gold",
     },
     {
       id: 3,
       icon: <RxPeople />,
       title: "Learn & Explore",
       des: "Use, modify, and make it yours",
-      iconcolor: "text-purple-600",
+      iconcolor: "text-secondary-foreground",
     },
   ];
 
@@ -90,27 +90,25 @@ const About = () => {
 
   return (
     <div className="w-full overflow-x-hidden">
-      <div className="max-w-[1400px] mx-auto px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:py-[8%]">
+      <div className="max-w-[1400px] mx-auto px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:pt-[8%]">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-8">
           <motion.div
-            // initial={{ x: -3000 }}
-            // animate={{ x: 0 }}
-            // transition={{
-            //   type: "tween",
-            //   duration: 1.5,
-            //   // delay: 0.5,
-            //   velocity: 0.6,
-            // }}
             className="flex w-full flex-col px-0 sm:px-2 lg:w-[80%] lg:px-3"
           >
-            <div className="w-fit rounded-xl border border-purple-200 bg-white px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-purple-600 sm:px-4 sm:py-2 sm:text-xs lg:text-sm">
+            <div className="w-fit rounded-xl border border-purple-200 bg-white px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-primary sm:px-4 sm:py-2 sm:text-xs lg:text-sm">
               About AnimateKit
             </div>
 
             <h2 className="mt-5 text-start text-[42px] font-black leading-[0.95] tracking-[-0.04em] text-[#101828] sm:text-[54px] md:text-[62px] lg:mt-6 lg:text-[68px] xl:text-[85px]">
               Small Interactions.
               <br />
-              <span className="bg-[linear-gradient(45deg,#1dd1a1_0%,#ff6b6b_37%,#48dbfb_41%,#feca57_68%)] bg-clip-text text-transparent">
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(90deg, oklch(0.48 0.13 185), oklch(0.58 0.17 28))",
+                }}
+              >
                 Big Impact.
               </span>
             </h2>
@@ -125,7 +123,6 @@ const About = () => {
               <br />
             </p>
 
-            {/* DETAILS */}
             <div className="mt-7 flex w-full flex-col sm:mt-8 sm:flex-row sm:items-stretch divide-x divide-neutral-200">
               {detail.map((item) => (
                 <div
@@ -153,13 +150,6 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            // initial={{ x: "100vw" }}
-            // animate={{ x: 0 }}
-            // transition={{
-            //   type: "tween",
-            //   duration: 1.5,
-            //   velocity: 0.6,
-            // }}
             className="mt-10 flex w-full items-center justify-center lg:mt-0 lg:w-[55%] lg:justify-end"
           >
             <img
@@ -170,48 +160,13 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* <div className="absolute  left-1/2 -translate-x-1/2 z-40">
-      <div className="flex flex-col items-center gap-2">
-        <div className="w-8 h-12 border-2 border-[var(--dark)] rounded-2xl flex items-start justify-center p-1">
-          <div className="w-2 h-2 bg-[var(--dark)] rounded-full animate-pulse">
-
-          </div>
-
-        </div>
-
       </div>
 
-      </div> */}
-{/* 
+      <div className="mx-auto  flex w-[92%] max-w-[1280px] flex-col divide-y divide-neutral-200 lg:w-[90%] lg:flex-row lg:divide-x lg:divide-y-0">
         <motion.div
-          animate={{ y: [0, 15, 0] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute left-1/2 top-[45%] flex -translate-x-1/2 flex-col items-center gap-2"
-        >
-          <div className="flex h-[48px] w-[30px] items-start justify-center rounded-full border-[2px] border-[#30343b]">
-            <div className="mt-[7px] h-[6px] w-[6px] rounded-full bg-[#30343b]" />
-          </div>
-
-          <span className="text-[12px] text-[#666]">Scroll</span>
-        </motion.div> */}
-      </div>
-
-      <div className="mx-auto mt-10 flex w-[92%] max-w-[1280px] flex-col divide-y divide-neutral-200 lg:w-[90%] lg:flex-row lg:divide-x lg:divide-y-0">
-        <motion.div
-          // initial={{ x: "-100%", opacity: 0 }}
-          // whileInView={{ x: 0, opacity: 1 }}
-          // viewport={{ once: false, amount: 0.2 }}
-          // transition={{
-          //   duration: 1.2,
-          //   ease: "easeOut",
-          // }}
           className="flex w-full flex-col pb-10 lg:w-[55%] lg:pr-10 lg:pb-0"
         >
-          <div className="w-fit rounded-xl bg-white px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.25em] text-purple-600 sm:px-4 sm:py-2 sm:text-[10px]">
+          <div className="w-fit rounded-xl bg-white px-3 py-1.5 text-[9px]  uppercase tracking-[0.25em] text-primary font-black sm:px-4 sm:py-2 sm:text-[10px]">
             Tech Stack
           </div>
 
@@ -247,16 +202,10 @@ const About = () => {
         </motion.div>
 
         <motion.div
-          // initial={{ x: "calc(100%)", opacity: 0 }}
-          // whileInView={{ x: 0, opacity: 1 }}
-          // viewport={{ once: false, amount: 0.2 }}
-          // transition={{
-          //   duration: 1.2,
-          //   ease: "easeOut",
-          // }}
+          
           className="flex w-full flex-col pb-10 pl-10 lg:w-[55%] lg:pr-10 lg:pb-0"
         >
-          <div className="w-fit rounded-xl bg-white px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.25em] text-purple-600 sm:px-4 sm:py-2 sm:text-[10px]">
+          <div className="w-fit rounded-xl bg-white px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.25em] text-primary sm:px-4 sm:py-2 sm:text-[10px]">
             Why AnimateKit
           </div>
 
@@ -274,7 +223,7 @@ const About = () => {
           <div className="mt-5 flex flex-col gap-3">
             {points?.map((item) => (
               <div key={item?.id} className="flex items-center gap-3">
-                <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-purple-600 text-white">
+                <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-secondary-foreground">
                   <FaCheck className="text-[10px]" />
                 </div>
 
@@ -320,11 +269,11 @@ const About = () => {
 
           {/* CENTER - PROFILE */}
           <div className="relative flex w-full flex-col justify-center px-7 py-8 sm:px-10 sm:py-9 lg:w-[44%] lg:border-l lg:border-r lg:border-purple-200/60 lg:px-10 lg:py-7">
-            <div className="mb-1 text-[10px] font-bold uppercase tracking-[0.3em] text-purple-500 sm:text-[11px]">
+            <div className="mb-1 text-[10px] font-bold uppercase tracking-[0.3em] text-primary sm:text-[11px]">
               Created By
             </div>
 
-            <h2 className="text-3xl font-extrabold tracking-[-0.04em] text-slate-900 sm:text-4xl lg:text-[30px]">
+            <h2 className="text-3xl font-extrabold tracking-[-0.04em] text-slate sm:text-4xl lg:text-[30px]">
               Rajul Gupta
             </h2>
 
@@ -371,7 +320,7 @@ const About = () => {
           </div>
 
           <div className="relative flex w-full flex-col items-center justify-center px-7 py-9 text-center sm:px-12 sm:py-10 lg:w-[28%] lg:px-8 lg:py-7">
-            <div className="absolute left-7 top-5 select-none font-serif text-[64px] font-bold leading-none text-purple-200/80 sm:left-10 lg:left-7">
+            <div className="absolute left-7 top-5 select-none font-serif text-[64px] font-bold leading-none text-coral sm:left-10 lg:left-7">
               “
             </div>
 
@@ -397,7 +346,7 @@ const About = () => {
 
           <div className="relative z-10 flex shrink-0 items-center justify-center">
             <div className="flex h-14 w-14 items-center justify-center rounded-full border border-purple-100/80 bg-purple-100/60 shadow-[0_5px_25px_rgba(139,92,246,0.10)] backdrop-blur-md sm:h-16 sm:w-16">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 text-white shadow-lg shadow-purple-500/20 sm:h-10 sm:w-10">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-purple-500/20 sm:h-10 sm:w-10">
                 <BsBox />
               </div>
             </div>
@@ -420,7 +369,7 @@ const About = () => {
           <div className="relative z-10 mt-5 shrink-0 sm:mt-6 lg:mx-8 lg:mt-0">
             <a
               href="mailto:rajulgupta2911@gmail.com"
-              className="group flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-violet-600 to-purple-500 px-6 py-3 text-xs font-medium text-white shadow-[0_8px_25px_rgba(124,58,237,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(124,58,237,0.35)] sm:w-fit sm:px-7 sm:py-3.5"
+              className="group flex w-full items-center justify-center gap-3 rounded-xl bg-primary px-6 py-3 text-xs font-medium text-white shadow-[0_8px_25px_rgba(124,58,237,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(124,58,237,0.35)] sm:w-fit sm:px-7 sm:py-3.5"
             >
               <FaEnvelope className="text-[12px]" />
               <span>Say Hello</span>

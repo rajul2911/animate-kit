@@ -15,21 +15,11 @@ import {
 import logo from "../../assests/motionlab.png";
 import { motion, LayoutGroup } from "motion/react";
 import { FaGithub } from "react-icons/fa6";
+import { CgMenuLeft } from "react-icons/cg";
 
 const animationDetails = [
   {
     id: 1,
-    name: "Page animations",
-    icon: <FiLayers />,
-    subhead: [
-      { id: 11, text: "Page Animation One", route: "/page-one" },
-      { id: 12, text: "Page Animation Two", route: "/page-two" },
-      { id: 13, text: "Page Animation Three", route: "/page-three" },
-    ],
-  },
-
-  {
-    id: 2,
     name: "Scroll animations",
     icon: <FiArrowUpRight />,
     subhead: [
@@ -40,19 +30,9 @@ const animationDetails = [
       { id: 25, text: "Perspective Scroll", route: "/perspective-scroll" },
     ],
   },
-
+  
   {
-    id: 3,
-    name: "Menu Animations",
-    icon: <FiType />,
-    subhead: [
-      { id: 31, text: "SideBar Curve", route: "/sidebar-curve" },
-      { id: 32, text: "SideBar Menu", route: "/sidebar-menu" },
-    ],
-  },
-
-  {
-    id: 4,
+    id: 2,
     name: "Cursor animations",
     icon: <FiMousePointer />,
     subhead: [
@@ -60,6 +40,30 @@ const animationDetails = [
       { id: 42, text: "Sticky cursor", route: "/sticky-cursor" },
     ],
   },
+
+  
+
+  {
+    id: 3,
+    name: "Menu Animations",
+    icon: <CgMenuLeft />,
+    subhead: [
+      { id: 31, text: "SideBar Curve", route: "/sidebar-curve" },
+      { id: 32, text: "SideBar Menu", route: "/sidebar-menu" },
+    ],
+  },
+  {
+    id: 4,
+    name: "Page animations",
+    icon: <FiLayers />,
+    subhead: [
+      { id: 11, text: "Page Animation One", route: "/page-one" },
+      { id: 12, text: "Page Animation Two", route: "/page-two" },
+      { id: 13, text: "Page Animation Three", route: "/page-three" },
+    ],
+  },
+
+  
 
   // {
   //   id: 5,
