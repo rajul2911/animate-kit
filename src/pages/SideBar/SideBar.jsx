@@ -166,119 +166,6 @@ const SideBar = ({ onNavigate }) => {
         </Link>
       </nav>
 
-      {/* <div className="mt-6 min-h-0 flex-1 overflow-y-auto scrollbar-hide sm:mt-8">
-        <p className="mb-4 px-3 text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
-          Animations
-        </p>
-        <LayoutGroup>
-          <div className="flex flex-col gap-1 pb-4">
-            {animationDetails.map((item) => {
-              const isOpen = openSections[item.id];
-
-              const isSectionActive = item.subhead.some(
-                (subItem) => location.pathname === subItem.route,
-              );
-
-              return (
-                <div key={item.id}>
-                  <button
-                    type="button"
-                    onClick={() => toggleSection(item.id)}
-                    className={`relative flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-[13px] font-semibold transition-all sm:text-[14px] ${
-                      isSectionActive
-                        ? "text-ink-soft"
-                        : "text-secondary-foreground hover:bg-secondary"
-                    }`}
-                  >
-                    {isSectionActive && (
-                      <motion.div
-                        layoutId="active-section"
-                        className="absolute inset-0 rounded-lg bg-secondary"
-                        transition={{
-                          type: "spring",
-                          stiffness: 500,
-                          damping: 35,
-                        }}
-                      />
-                    )}
-
-                    <div className="relative  flex min-w-0 items-center gap-3 sm:gap-4">
-                      <span className="shrink-0 text-[17px]">{item.icon}</span>
-
-                      <span className="truncate">{item.name}</span>
-                    </div>
-
-                    <div className="relative">
-                      {isOpen ? (
-                        <FiChevronUp className="ml-2 shrink-0 text-[15px]" />
-                      ) : (
-                        <FiChevronDown className="ml-2 shrink-0 text-[15px]" />
-                      )}
-                    </div>
-                  </button>
-
-                  {isOpen && (
-                    <div className="ml-[22px] mt-2 border-l border-[#cbdfe1] pl-4 sm:pl-5">
-                      {item.subhead.map((subItem) => {
-                        const active = isActive(subItem.route);
-
-                        return (
-                          <Link
-                            key={subItem.id}
-                            to={subItem.route}
-                            onClick={handleNavigate}
-                            className={`relative block rounded-lg px-3 py-2 text-[12px] leading-5 transition-colors sm:text-[13px] ${
-                              active
-                                ? "font-semibold text-ink-soft"
-                                : "text-secondary-foreground hover:text-ink-soft"
-                            }`}
-                          >
-                            {active && (
-                              <motion.div
-                                layoutId="active-subitem"
-                                className="absolute inset-0 rounded-lg bg-accent"
-                                transition={{
-                                  type: "spring",
-                                  stiffness: 500,
-                                  damping: 35,
-                                }}
-                              />
-                            )}
-
-                            <span className="relative">
-                              {subItem.text}
-                            </span>
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </LayoutGroup>
-        <a
-          href="https://github.com/rajul2911/animate-kit"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex w-full items-center gap-3 rounded-xl bg-muted px-4 py-3 transition-all duration-300 hover:shadow-sm hover:bg-coral hover:text-white"
-        >
-          <FaGithub className="h-7 w-7 shrink-0 text-foreground group-hover:text-white" />
-
-          <div className="flex-1">
-            <p className="text-[13px] font-semibold leading-tight text-foreground group-hover:text-white">
-              Star on GitHub
-            </p>
-            <p className="mt-1 text-[10px] leading-tight text-muted-foreground group-hover:text-white">
-              If you find this helpful!
-            </p>
-          </div>
-
-          <FiArrowRight className="h-5 w-5 text-foreground group-hover:text-white" />
-        </a>
-      </div> */}
-
       <div className="mt-6 flex min-h-0 flex-1 flex-col sm:mt-8">
         {/* ONLY THIS SECTION SCROLLS */}
         <div className="min-h-0 flex-1 overflow-y-auto scrollbar-hide">
@@ -377,7 +264,7 @@ const SideBar = ({ onNavigate }) => {
         </div>
 
         {/* FIXED BOTTOM GITHUB CARD */}
-        <div className="shrink-0 pt-3">
+        <div className="shrink-0 mb-1">
           <a
             href="https://github.com/rajul2911/animate-kit"
             target="_blank"
