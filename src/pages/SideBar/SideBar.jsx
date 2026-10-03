@@ -45,9 +45,10 @@ const animationDetails = [
     id: 3,
     name: "Menu Animations",
     icon: <FiType />,
-    subhead: [{ id: 31, text: "SideBar Curve", route: "/sidebar-curve" },
-     { id: 32, text: "SideBar Menu", route: "/sidebar-menu" },
-    ]
+    subhead: [
+      { id: 31, text: "SideBar Curve", route: "/sidebar-curve" },
+      { id: 32, text: "SideBar Menu", route: "/sidebar-menu" },
+    ],
   },
 
   {
@@ -56,7 +57,7 @@ const animationDetails = [
     icon: <FiMousePointer />,
     subhead: [
       { id: 41, text: "Mask cursor", route: "/mask-cursor" },
-      { id: 42, text: "Sticky cursor", route: "/sticky-cursor" }
+      { id: 42, text: "Sticky cursor", route: "/sticky-cursor" },
     ],
   },
 
@@ -126,8 +127,9 @@ const SideBar = ({ onNavigate }) => {
         <img src={logo} alt="MotionLab" className="h-10 w-10 object-contain" />
 
         <div className="flex min-w-0 flex-col">
-          <span className="text-[20px] font-bold leading-5 text-[#111827]">
-            MotionLab
+          <span className="text-[20px] font-bold leading-5">
+            <span className="text-foreground">Animate</span>
+            <span className="text-coral">Kit</span>
           </span>
 
           <span className="mt-1 text-[10px] font-medium text-[#64748b]">
@@ -256,25 +258,25 @@ const SideBar = ({ onNavigate }) => {
             })}
           </div>
         </LayoutGroup>
-      <a
-        href="https://github.com/rajul2911/animate-kit"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group flex w-full items-center gap-3 rounded-xl bg-muted px-4 py-3 transition-all duration-300 hover:shadow-sm hover:bg-coral hover:text-white"
-      >
-        <FaGithub className="h-7 w-7 shrink-0 text-foreground group-hover:text-white" />
-        
-        <div className="flex-1">
-          <p className="text-[13px] font-semibold leading-tight text-foreground group-hover:text-white">
-            Star on GitHub
-          </p>
-          <p className="mt-1 text-[10px] leading-tight text-muted-foreground group-hover:text-white">
-            If you find this helpful!
-          </p>
-        </div>
-        
-        <FiArrowRight className="h-5 w-5 text-foreground group-hover:text-white" />
-      </a>
+        <a
+          href="https://github.com/rajul2911/animate-kit"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex w-full items-center gap-3 rounded-xl bg-muted px-4 py-3 transition-all duration-300 hover:shadow-sm hover:bg-coral hover:text-white"
+        >
+          <FaGithub className="h-7 w-7 shrink-0 text-foreground group-hover:text-white" />
+
+          <div className="flex-1">
+            <p className="text-[13px] font-semibold leading-tight text-foreground group-hover:text-white">
+              Star on GitHub
+            </p>
+            <p className="mt-1 text-[10px] leading-tight text-muted-foreground group-hover:text-white">
+              If you find this helpful!
+            </p>
+          </div>
+
+          <FiArrowRight className="h-5 w-5 text-foreground group-hover:text-white" />
+        </a>
       </div>
     </aside>
   );

@@ -70,7 +70,7 @@ const MainPage = () => {
             <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 sm:gap-6 md:gap-8">
               <div>
                 <h3 className="text-[19px] font-bold text-foreground sm:text-[20px]">
-                  10
+                  12
                 </h3>
                 <p className="text-[11px] text-muted-foreground sm:text-[12px]">
                   Animations

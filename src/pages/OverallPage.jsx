@@ -21,7 +21,7 @@ const OverallPage = () => {
         </button>
 
         <span className="ml-3 text-[18px] font-bold text-[#111827]">
-          MotionLab
+          Animate Kit
         </span>
       </header>
 

@@ -19,7 +19,7 @@ const Footer = () => {
             </p>
 
             <h2 className="max-w-[650px] text-[30px] font-bold leading-[1.12] tracking-[-0.8px] text-foreground sm:text-[36px] sm:leading-[1.1] sm:tracking-[-1px] md:text-[40px] lg:text-[42px]">
-              MotionLab is for creators,
+              Animate Kit is for creators,
               <br className="hidden sm:block" />
               developers, and dreamers.
             </h2>
