@@ -206,13 +206,13 @@ const SideBar = ({ onNavigate }) => {
                       />
                     )}
 
-                    <div className="relative z-10 flex min-w-0 items-center gap-3 sm:gap-4">
+                    <div className="relative  flex min-w-0 items-center gap-3 sm:gap-4">
                       <span className="shrink-0 text-[17px]">{item.icon}</span>
 
                       <span className="truncate">{item.name}</span>
                     </div>
 
-                    <div className="relative z-10">
+                    <div className="relative">
                       {isOpen ? (
                         <FiChevronUp className="ml-2 shrink-0 text-[15px]" />
                       ) : (
@@ -249,7 +249,7 @@ const SideBar = ({ onNavigate }) => {
                               />
                             )}
 
-                            <span className="relative z-10">
+                            <span className="relative">
                               {subItem.text}
                             </span>
                           </Link>
