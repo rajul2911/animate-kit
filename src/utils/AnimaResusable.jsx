@@ -406,7 +406,7 @@ const AnimaResusable = ({
           )}
 
           {viewAnimationRoute && (
-            <motion.Link
+            <Link
               to={`/${viewAnimationRoute}`}
               whileTap={{scale:0.9}}
               target="_blank"
@@ -418,7 +418,7 @@ const AnimaResusable = ({
               <span>View Animation</span>
 
               <FiArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
-            </motion.Link>
+            </Link>
           )}
         </div>
       </div>
