@@ -14,6 +14,7 @@ import {
   FiMinimize2,
   FiX,
 } from "react-icons/fi";
+import { motion } from "motion/react";
 
 const getLanguage = (fileName = "") => {
   const extension = fileName.split(".").pop()?.toLowerCase();
@@ -169,7 +170,7 @@ const AnimaResusable = ({
           </div>
         )}
 
-        <header className="mb-7 flex flex-col gap-6 border-b border-[#d9e2e3] pb-7 sm:mb-8 sm:pb-8 lg:flex-row lg:items-end lg:justify-between">
+        <header className="mb-7 flex flex-col gap-6 border-b border-[#d9e2e3] pb-7 sm:mb-8 sm:pb-8 lg:flex-row lg:items-end lg:justify-between px-4 md:px-0">
           <div className="max-w-[760px]">
             <div className="mb-3 flex flex-wrap items-center gap-2">
               <h1 className="m-0 text-3xl font-bold tracking-[-0.035em] text-foreground sm:text-4xl lg:text-5xl">
@@ -201,7 +202,7 @@ const AnimaResusable = ({
           </div>
         </header>
 
-        <section className="grid grid-cols-1 gap-5 xl:grid-cols-2">
+        <section className="grid grid-cols-1 gap-5 xl:grid-cols-2 px-4 md:px-0">
           <div className="h-full self-start overflow-hidden rounded-2xl border border-[#d9e3e5] bg-white shadow-[0_8px_30px_rgba(15,50,60,0.05)]">
             <div className="flex h-[54px] items-center justify-between border-b border-[#e4ebec] px-4 sm:px-5">
               <div className="flex items-center gap-3">
@@ -387,25 +388,27 @@ const AnimaResusable = ({
           </div>
         </section>
 
-        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-6 flex flex-row items-center justify-center gap-3 px-3">
           {githubUrl && (
-            <a
+            <motion.a
               href={githubUrl}
+              whileTap={{scale:0.9}}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#cfdcde] bg-[#181717] px-6 py-3 text-xs font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#173845] hover:shadow-md sm:w-auto sm:text-sm hover:bg-white hover:text-foreground"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#cfdcde] bg-[#181717] px-6 py-3 text-xs font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#173845] hover:shadow-md sm:w-auto sm:text-sm hover:bg-white hover:text-foreground "
             >
               <FiGithub className="text-base" />
 
               <span>Source Code</span>
 
               <FiExternalLink className="text-xs opacity-60 transition-transform duration-300 group-hover:translate-x-0.5" />
-            </a>
+            </motion.a>
           )}
 
           {viewAnimationRoute && (
-            <Link
+            <motion.Link
               to={`/${viewAnimationRoute}`}
+              whileTap={{scale:0.9}}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#073445] px-6 py-3 text-xs font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-md sm:w-auto sm:text-sm hover:text-foreground"
@@ -415,7 +418,7 @@ const AnimaResusable = ({
               <span>View Animation</span>
 
               <FiArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+            </motion.Link>
           )}
         </div>
       </div>
