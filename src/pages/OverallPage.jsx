@@ -182,9 +182,7 @@ const OverallPage = () => {
           aria-label="Open menu"
           // aria-label={isSidebarOpen ? "Close menu" : "Open menu"}
         >
-          
-            <FiMenu className="text-[22px]" />
-          
+          <FiMenu className="text-[22px]" />
         </motion.button>
 
         <span className="ml-3 text-[18px] font-bold text-[#111827]">
@@ -296,7 +294,9 @@ const OverallPage = () => {
             exit={{ opacity: 1 }}
           >
             {outlet}
-            <SVG width={dimensions.width} height={dimensions.height} />
+            {dimensions.width !== null && dimensions.height !== null && (
+              <SVG width={dimensions.width} height={dimensions.height} />
+            )}
           </motion.div>
         </AnimatePresence>
       </main>

@@ -390,9 +390,8 @@ const AnimaResusable = ({
 
         <div className="mt-6 flex flex-row items-center justify-center gap-3 px-3">
           {githubUrl && (
-            <motion.a
+            <a
               href={githubUrl}
-              whileTap={{scale:0.9}}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#cfdcde] bg-[#181717] px-6 py-3 text-xs font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#173845] hover:shadow-md sm:w-auto sm:text-sm hover:bg-white hover:text-foreground "
@@ -402,13 +401,12 @@ const AnimaResusable = ({
               <span>Source Code</span>
 
               <FiExternalLink className="text-xs opacity-60 transition-transform duration-300 group-hover:translate-x-0.5" />
-            </motion.a>
+            </a>
           )}
 
           {viewAnimationRoute && (
             <Link
               to={`/${viewAnimationRoute}`}
-              whileTap={{scale:0.9}}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#073445] px-6 py-3 text-xs font-bold text-white no-underline shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-md sm:w-auto sm:text-sm hover:text-foreground"

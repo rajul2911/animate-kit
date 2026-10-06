@@ -48,6 +48,7 @@ const animationDetails = [
     subhead: [
       { id: 31, text: "SideBar Curve", route: "/sidebar-curve" },
       { id: 32, text: "SideBar Menu", route: "/sidebar-menu" },
+      { id: 33, text: "Sticky Footer", route: "/sticky-footer" },
     ],
   },
   {

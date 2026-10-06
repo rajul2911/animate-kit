@@ -37,6 +37,8 @@ import CursorTwo_Show from "./components/CursorAnimation/Sticky-Cursor/CursorTwo
 import StickyCursor from "./components/CursorAnimation/Sticky-Cursor/StickyCursor";
 import MenuTwo_Show from "./components/MenuAnimation/MenuTwo/MenuTwo_Show";
 import SideBarMenu from "./components/MenuAnimation/MenuTwo/SideBarMenu";
+import MenuTHree_Show from "./components/MenuAnimation/StickyFooter/MenuTHree_Show";
+import StickyFooter from "./components/MenuAnimation/StickyFooter/StickyFooter";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -75,6 +77,7 @@ const App = () => {
           {/* MENU ANIMATION */}
           <Route path="/sidebar-curve" element={<MenuOne_Show />} />
           <Route path="/sidebar-menu" element={<MenuTwo_Show />} />
+          <Route path="/sticky-footer" element={<MenuTHree_Show />} />
 
 
           {/* CURSOR EFFECT */}
@@ -123,6 +126,7 @@ const App = () => {
 
         <Route path="sidebar-curve-live" element={<MenuOne />}/>
         <Route path="sidebar-menu-live" element={<SideBarMenu />}/>
+        <Route path="sticky-footer-live" element={<StickyFooter />}/>
 
                   {/* CURSOR EFFECT */}
 
