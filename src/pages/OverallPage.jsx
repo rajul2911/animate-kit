@@ -96,17 +96,30 @@ const routes = {
   "/": "Home",
   "/about": "About",
   "/contact": "Contact",
+
+  // ACROLL ANIMATION
+
   "/parallax-scroll": "Parallax Scroll",
   "/card-parallax": "Card Parallax",
   "/zoom-parallax": "Zoom Parallax",
   "/text-gradient": "Text Gradient",
   "/perspective-scroll": "Perspective Scroll",
+
+  // CURSOR ANIMATION
+
+
   "/mask-cursor": "Mask Cursor",
   "/sticky-cursor": "Sticky Cursor",
+
+  // MENU ANIMATION
   "/sidebar-curve": "Sidebar Curve",
   "/sidebar-menu": "Sidebar Menu",
+  "/sticky-footer": "Sticky Footer",
+
+  // PAGE ANIMATION
   "/page-one": "Page One",
   "/page-two": "Page Two",
+  "/page-three": "Page Three",
   "/page-three": "Page Three",
 };
 

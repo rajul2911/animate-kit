@@ -52,6 +52,14 @@ const animationDetails = [
     ],
   },
   {
+    id: 5,
+    name: "SVG Animation",
+    icon: <FiLayers />,
+    subhead: [
+      { id: 51, text: "Morph SVG", route: "/morph-svg" },
+    ],
+  },
+  {
     id: 4,
     name: "Page animations",
     icon: <FiLayers />,

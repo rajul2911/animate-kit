@@ -39,6 +39,8 @@ import MenuTwo_Show from "./components/MenuAnimation/MenuTwo/MenuTwo_Show";
 import SideBarMenu from "./components/MenuAnimation/MenuTwo/SideBarMenu";
 import MenuTHree_Show from "./components/MenuAnimation/StickyFooter/MenuTHree_Show";
 import StickyFooter from "./components/MenuAnimation/StickyFooter/StickyFooter";
+import SVGOne_Show from "./components/SVG/SVGOne_Show";
+import MorphSvg from "./components/SVG/MorphSvg";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -83,6 +85,9 @@ const App = () => {
           {/* CURSOR EFFECT */}
           <Route path="/mask-cursor" element={<CursorOne_Show />} />
           <Route path="/sticky-cursor" element={<CursorTwo_Show />} />
+
+          {/* SVG */}
+          <Route path="/morph-svg" element={<SVGOne_Show />} />
 
         </Route>
 
@@ -132,6 +137,11 @@ const App = () => {
 
         <Route path="mask-cursor-live" element={<CursorOne />}/>
         <Route path="sticky-cursor-live" element={<StickyCursor />}/>
+
+
+                    {/* SVG */}
+
+        <Route path="morph-svg-live" element={<MorphSvg />}/>          
 
 
       </Routes>
