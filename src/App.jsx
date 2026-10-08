@@ -41,6 +41,8 @@ import MenuTHree_Show from "./components/MenuAnimation/StickyFooter/MenuTHree_Sh
 import StickyFooter from "./components/MenuAnimation/StickyFooter/StickyFooter";
 import SVGOne_Show from "./components/SVG/SVGOne_Show";
 import MorphSvg from "./components/SVG/MorphSvg";
+import MenuFour_Show from "./components/MenuAnimation/PixelTransition/MenuFour_Show";
+import Pixel from "./components/MenuAnimation/PixelTransition/Pixel";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -80,6 +82,7 @@ const App = () => {
           <Route path="/sidebar-curve" element={<MenuOne_Show />} />
           <Route path="/sidebar-menu" element={<MenuTwo_Show />} />
           <Route path="/sticky-footer" element={<MenuTHree_Show />} />
+          <Route path="/pixel-transition" element={<MenuFour_Show />} />
 
 
           {/* CURSOR EFFECT */}
@@ -132,6 +135,7 @@ const App = () => {
         <Route path="sidebar-curve-live" element={<MenuOne />}/>
         <Route path="sidebar-menu-live" element={<SideBarMenu />}/>
         <Route path="sticky-footer-live" element={<StickyFooter />}/>
+        <Route path="pixel-transition-live" element={<Pixel />}/>
 
                   {/* CURSOR EFFECT */}
 

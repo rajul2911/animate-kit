@@ -97,7 +97,7 @@ const routes = {
   "/about": "About",
   "/contact": "Contact",
 
-  // ACROLL ANIMATION
+  // SCROLL ANIMATION
 
   "/parallax-scroll": "Parallax Scroll",
   "/card-parallax": "Card Parallax",
@@ -115,12 +115,19 @@ const routes = {
   "/sidebar-curve": "Sidebar Curve",
   "/sidebar-menu": "Sidebar Menu",
   "/sticky-footer": "Sticky Footer",
+  "/pixel-transition": "Pixel Transition",
+
 
   // PAGE ANIMATION
   "/page-one": "Page One",
   "/page-two": "Page Two",
   "/page-three": "Page Three",
   "/page-three": "Page Three",
+
+
+  // SVG ANIMATION
+  "/morph-svg": "Morph SVG",
+
 };
 
 const anim = (variants) => ({

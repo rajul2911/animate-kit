@@ -49,6 +49,7 @@ const animationDetails = [
       { id: 31, text: "SideBar Curve", route: "/sidebar-curve" },
       { id: 32, text: "SideBar Menu", route: "/sidebar-menu" },
       { id: 33, text: "Sticky Footer", route: "/sticky-footer" },
+      { id: 33, text: "Pixel Transition", route: "/pixel-transition" },
     ],
   },
   {
