@@ -11,7 +11,7 @@ const MenuTHree_Show = () => {
         description="A smooth footer animation that stays fixed or reveals itself as you scroll for a seamless transition."
         // videoLink="https://videos.animate-kit.store/Menu/Menu_Two.mp4"
           code={Three}
-        //   githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/MenuAnimation/MenuTwo"
+          githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/MenuAnimation/StickyFooter"
         viewAnimationRoute="sticky-footer-live"
       />
     </div>

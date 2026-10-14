@@ -11,7 +11,7 @@ const MenuFour_Show = () => {
         description="A dynamic transition where pixels smoothly animate to reveal or transform between sections."
         // videoLink="https://videos.animate-kit.store/Menu/Menu_Two.mp4"
         code={Four}
-        //   githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/MenuAnimation/MenuTwo"
+          githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/MenuAnimation/PixelTransition"
         viewAnimationRoute="pixel-transition-live"
       />
     </div>

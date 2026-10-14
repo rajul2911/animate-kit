@@ -11,7 +11,7 @@ const SVGOne_Show = () => {
         description="A smooth animation that transforms one SVG shape into another using fluid path interpolation."
         // videoLink="https://videos.animate-kit.store/Menu/Menu_Two.mp4"
           code={One}
-        //   githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/MenuAnimation/MenuTwo"
+          githubUrl="https://github.com/rajul2911/animate-kit/tree/main/src/components/SVG"
         viewAnimationRoute="morph-svg-live"
       />
     </div>
