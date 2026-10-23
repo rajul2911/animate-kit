@@ -43,6 +43,7 @@ import SVGOne_Show from "./components/SVG/SVGOne_Show";
 import MorphSvg from "./components/SVG/MorphSvg";
 import MenuFour_Show from "./components/MenuAnimation/PixelTransition/MenuFour_Show";
 import Pixel from "./components/MenuAnimation/PixelTransition/Pixel";
+import MenuFIve_Show from "./components/MenuAnimation/HoverImageMenu/MenuFIve_Show";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -83,6 +84,7 @@ const App = () => {
           <Route path="/sidebar-menu" element={<MenuTwo_Show />} />
           <Route path="/sticky-footer" element={<MenuTHree_Show />} />
           <Route path="/pixel-transition" element={<MenuFour_Show />} />
+          <Route path="/hoverimage-menu" element={<MenuFIve_Show />} />
 
 
           {/* CURSOR EFFECT */}
